@@ -22,6 +22,10 @@ h2 {
   font-weight: normal;
 }
 
+a {
+  color: #565656;
+}
+
 header h1 {
   margin-bottom: 0;
 }
@@ -45,6 +49,10 @@ main h2 {
 
 main img {
   max-height: 16px;
+}
+
+footer {
+  font-size: 0.8rem;
 }
 
 .name {
