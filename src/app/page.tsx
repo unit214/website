@@ -3,6 +3,8 @@
 import Head from 'next/head';
 import * as React from 'react';
 
+import CyanBox from '@/components/CyanBox';
+
 /**
  * SVGR Support
  * Caveat: No React Props Type.
@@ -17,9 +19,10 @@ export default function HomePage() {
       <Head>
         <title>Hi there</title>
       </Head>
-      <div className='bg-primary-cyan h-20 w-full font-mono'>Unit 214</div>
-      <div className='bg-primary-red h-20 w-full'>Coming</div>
-      <div className='bg-primary-amber h-20 w-full'>soon...</div>
+      <div className='h-[4000px] items-center justify-center'>
+        <div className='bg-primary-amber custom-angled-rectangle-yellow absolute h-[824px] w-full justify-center' />
+        <CyanBox />
+      </div>
     </main>
   );
 }
