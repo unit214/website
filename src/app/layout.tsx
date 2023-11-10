@@ -6,6 +6,7 @@ import '@/styles/globals.css';
 import { siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://unit214.dev'),
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.title}`,
