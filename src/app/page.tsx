@@ -1,9 +1,9 @@
 'use client';
 
-import Head from 'next/head';
 import * as React from 'react';
 
-import CyanBox from '@/components/CyanBox';
+import AmberBox from '@/components/AmberBox';
+import CyanBoxAndHeader from '@/components/CyanBoxAndHeader';
 
 /**
  * SVGR Support
@@ -16,12 +16,9 @@ import CyanBox from '@/components/CyanBox';
 export default function HomePage() {
   return (
     <main>
-      <Head>
-        <title>Hi there</title>
-      </Head>
       <div className='h-[4000px] items-center justify-center'>
-        <div className='bg-primary-amber custom-angled-rectangle-yellow absolute h-[824px] w-full justify-center' />
-        <CyanBox />
+        <AmberBox />
+        <CyanBoxAndHeader />
       </div>
     </main>
   );
