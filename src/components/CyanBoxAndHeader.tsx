@@ -5,9 +5,7 @@ import { CgMouse } from 'react-icons/cg';
 import Header from '@/components/Header';
 import MainClaim from '@/components/MainClaim';
 
-export const cyanBoxWidth = 1300;
-const cyanBoxHeight = 850;
-const offsetTop = cyanBoxHeight - 160;
+const offsetTop = 690;
 export default function CyanBoxAndHeader() {
   const [opacity, setOpacity] = useState(0);
 
@@ -33,20 +31,16 @@ export default function CyanBoxAndHeader() {
   }, []);
 
   return (
-    <div className={`sticky -top-[${offsetTop}px]`}>
+    <div className='sticky -top-[690px]'>
       <div className='flex w-full justify-center'>
-        <div
-          className={`bg-primary-cyan custom-angled-rectangle-animated flex h-[${cyanBoxHeight}px] w-[${cyanBoxWidth}px] flex-col justify-center`}
-        >
+        <div className='bg-primary-cyan custom-angled-rectangle-animated flex h-[850px] w-[1300px] flex-col justify-center'>
           <Header className='absolute top-0' />
           {opacity > 0 && (
             <Header opacity={opacity} className='fixed top-0 mt-5' />
           )}
           <div className='flex h-full w-full flex-col justify-center px-28'>
             <MainClaim />
-            <div
-              className={`absolute bottom-40 flex max-w-[${cyanBoxWidth}px] flex-col items-center gap-4 text-white`}
-            >
+            <div className='absolute bottom-40 flex max-w-[1300px] flex-col items-center gap-4 text-white'>
               <div className='text-xs font-light [writing-mode:vertical-lr]'>
                 WHAT WE DO
               </div>
