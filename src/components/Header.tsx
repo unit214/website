@@ -3,8 +3,8 @@ import { FiMail } from 'react-icons/fi';
 
 import { cn } from '@/lib/utils';
 
-import { cyanBoxWidth } from '@/components/CyanBoxAndHeader';
 import NextImage from '@/components/NextImage';
+
 export default function Header({
   opacity,
   className,
@@ -16,7 +16,7 @@ export default function Header({
     <div
       style={{ opacity: opacity }}
       className={cn(
-        `mt-12 flex max-h-[100px] w-full max-w-[${cyanBoxWidth}px] items-start justify-between px-16`,
+        `mt-12 flex max-h-[100px] w-full max-w-[1300px] items-start justify-between px-16`,
         className
       )}
     >
