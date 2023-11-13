@@ -6,13 +6,13 @@ export function WhatWeDo() {
         <div className='max-w-[430px] text-xl font-normal'>
           With our experience as well as our transparent and flexible work, we
           always meet our clients' needs by providing{' '}
-          <a className='font-semibold'>Full-Stack Development</a>,{' '}
-          <a className='font-semibold'>Software Architecture</a> and{' '}
-          <a className='font-semibold'>IT Consulting</a>. <br /> <br /> In
+          <span className='font-semibold'>Full-Stack Development</span>,{' '}
+          <span className='font-semibold'>Software Architecture</span> and{' '}
+          <span className='font-semibold'>IT Consulting</span>. <br /> <br /> In
           addition, we consult in the specialized areas of{' '}
-          <a className='font-semibold'>Blockchain</a>,{' '}
-          <a className='font-semibold'>Machine Learning</a> and{' '}
-          <a className='font-semibold'>Cloud-Native Computing</a>.
+          <span className='font-semibold'>Blockchain</span>,{' '}
+          <span className='font-semibold'>Machine Learning</span> and{' '}
+          <span className='font-semibold'>Cloud-Native Computing</span>.
         </div>
       </div>
     </div>
