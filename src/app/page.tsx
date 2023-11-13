@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import AmberBox from '@/components/AmberBox';
 import CyanBoxAndHeader from '@/components/CyanBoxAndHeader';
+import { WhatWeDo } from '@/components/WhatWeDo';
 
 /**
  * SVGR Support
@@ -16,9 +17,10 @@ import CyanBoxAndHeader from '@/components/CyanBoxAndHeader';
 export default function HomePage() {
   return (
     <main>
-      <div className='h-[4000px] items-center justify-center'>
+      <div className='h-[4000px]'>
         <AmberBox />
         <CyanBoxAndHeader />
+        <WhatWeDo />
       </div>
     </main>
   );
