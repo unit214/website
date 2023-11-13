@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1,
+  .h1 {
+    @apply font-primary text-3xl font-semibold;
+  }
+}
+
 @keyframes angleChange {
   0%,
   100% {

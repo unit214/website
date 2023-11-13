@@ -19,7 +19,7 @@ export default function CyanBoxAndHeader() {
       } else {
         setHeaderOpacity(0);
       }
-      // Start decreasing opacity of header before offsetTop is reached
+      // Start decreasing opacity of scroll down button to 0 before offsetTop is reached
       if (scrollTop < offsetTop) {
         setScrollDownButtonOpacity(Math.min(1, (offsetTop - scrollTop) / 150));
       } else {

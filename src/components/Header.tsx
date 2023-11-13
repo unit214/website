@@ -13,6 +13,13 @@ export default function Header({
   opacity?: number;
   className?: string;
 }) {
+  function scrollUp() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
   return (
     <div
       style={{ opacity: opacity }}
@@ -21,7 +28,7 @@ export default function Header({
         className
       )}
     >
-      <Link href='/'>
+      <button onClick={scrollUp}>
         <NextImage
           src='/svg/unit214_bw.svg'
           useSkeleton
@@ -29,7 +36,7 @@ export default function Header({
           width='120'
           height='100'
         />
-      </Link>
+      </button>
       <div className='grow'></div>
       <Link
         className='flex h-9 w-44 items-center justify-center gap-1.5 rounded-2xl bg-white'
