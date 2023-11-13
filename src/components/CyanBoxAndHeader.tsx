@@ -7,45 +7,62 @@ import MainClaim from '@/components/MainClaim';
 
 const offsetTop = 690;
 export default function CyanBoxAndHeader() {
-  const [opacity, setOpacity] = useState(0);
+  const [headerOpacity, setHeaderOpacity] = useState(0);
+  const [scrollDownButtonOpacity, setScrollDownButtonOpacity] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      // Start increasing opacity once offsetTop is reached
+      // Start increasing opacity of header once offsetTop is reached
       if (scrollTop >= offsetTop) {
-        // The denominator (500 in this case) controls how quickly the opacity changes
-        const newOpacity = Math.min(1, (scrollTop - offsetTop) / 500);
-        setOpacity(newOpacity);
+        setHeaderOpacity(Math.min(1, (scrollTop - offsetTop) / 150));
       } else {
-        setOpacity(0);
+        setHeaderOpacity(0);
+      }
+      // Start decreasing opacity of header before offsetTop is reached
+      if (scrollTop < offsetTop) {
+        setScrollDownButtonOpacity(Math.min(1, (offsetTop - scrollTop) / 150));
+      } else {
+        setScrollDownButtonOpacity(0);
       }
     };
 
     handleScroll();
-    // Add event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  function scrollDown() {
+    window.scroll({
+      top: offsetTop + 150,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
 
   return (
     <div className='sticky -top-[690px]'>
       <div className='flex w-full justify-center'>
         <div className='bg-primary-cyan custom-angled-rectangle-animated flex h-[850px] w-[1300px] flex-col justify-center'>
           <Header className='absolute top-0' />
-          {opacity > 0 && (
-            <Header opacity={opacity} className='fixed top-0 mt-5' />
+          {headerOpacity > 0 && (
+            <Header opacity={headerOpacity} className='fixed top-0 mt-5' />
           )}
-          <div className='flex h-full w-full flex-col justify-center px-28'>
+          <div className='flex h-full w-full flex-col justify-center'>
             <MainClaim />
-            <div className='absolute bottom-40 flex max-w-[1300px] flex-col items-center gap-4 text-white'>
-              <div className='text-xs font-light [writing-mode:vertical-lr]'>
-                WHAT WE DO
-              </div>
-              <CgMouse size={40} />
-            </div>
+            {scrollDownButtonOpacity > 0 && (
+              <button
+                style={{ opacity: scrollDownButtonOpacity }}
+                className='absolute bottom-12 flex max-w-[1300px] flex-col items-center gap-4 pl-24 text-white'
+                onClick={scrollDown}
+              >
+                <div className='text-xs font-light [writing-mode:vertical-lr]'>
+                  WHAT WE DO
+                </div>
+                <CgMouse size={40} />
+              </button>
+            )}
           </div>
         </div>
       </div>
