@@ -9,7 +9,40 @@
   }
 }
 
-@keyframes angleChange {
+/*
+How clip-path: polygon() works:
+
+|----------------> x
+| 1_____________2
+| |             |
+| |             |
+| |_____________|
+V 4             3
+y
+
+- Coordinate system starting in the top right corner at 0% y and 0% x
+- 100% x means full width to the right
+- 100% y means full height to the bottom
+- 1: top left corner
+- 2: top right corner
+- 3: bottom right corner
+- 4: bottom left corner
+-          1    2    3    4
+  polygon(x y, x y, x y, x y);
+
+*/
+
+@keyframes angleChangeCyanMobile {
+  0%,
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 93%, 0% 98%);
+  }
+}
+
+@keyframes angleChangeCyan {
   0%,
   100% {
     clip-path: polygon(0% 0%, 100% 0%, 98.76% 91.43%, 3.13% 100%);
@@ -19,14 +52,20 @@
   }
 }
 
-.custom-angled-rectangle-animated {
-  animation: angleChange 20s infinite;
-}
+@layer utilities {
+  .custom-angled-rectangle-cyan-animated {
+    animation: angleChangeCyan 20s infinite;
+  }
 
-.custom-angled-rectangle-cyan {
-  clip-path: polygon(0% 0%, 100% 0%, 98.76% 91.43%, 3.13% 100%);
-}
+  .custom-angled-rectangle-cyan-animated-mobile {
+    animation: angleChangeCyanMobile 20s infinite;
+  }
 
-.custom-angled-rectangle-yellow {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
+  .custom-angled-rectangle-cyan {
+    clip-path: polygon(0% 0%, 100% 0%, 98.76% 91.43%, 3.13% 100%);
+  }
+
+  .custom-angled-rectangle-yellow {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
+  }
 }

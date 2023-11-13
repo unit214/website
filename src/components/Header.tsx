@@ -21,30 +21,34 @@ export default function Header({
     });
   }
   return (
-    <div
-      style={{ opacity: opacity }}
-      className={cn(
-        `mt-12 flex max-h-[100px] w-full max-w-[1300px] items-start justify-between px-16`,
-        className
-      )}
-    >
-      <button onClick={scrollUp}>
-        <NextImage
-          src='/svg/unit214_bw.svg'
-          useSkeleton
-          alt='Icon'
-          width='120'
-          height='100'
-        />
-      </button>
-      <div className='grow'></div>
-      <Link
-        className='flex h-9 w-44 items-center justify-center gap-1.5 rounded-2xl bg-white'
-        href='mailto:contact@unit214.de'
+    <div>
+      <div
+        style={{ opacity: opacity }}
+        className={cn(
+          `mt-5 flex max-h-[100px] w-full items-start justify-between px-5 lg:mt-12 lg:max-w-[1300px] lg:px-16`,
+          className
+        )}
       >
-        <span className='text-sm font-semibold'>Let's get in touch!</span>
-        <FiMail />
-      </Link>
+        <button onClick={scrollUp}>
+          <NextImage
+            src='/svg/unit214_bw.svg'
+            useSkeleton
+            alt='Icon'
+            width='120'
+            height='100'
+          />
+        </button>
+        <div className='grow'></div>
+        <Link
+          className='flex h-9 items-center justify-center gap-1.5 rounded-2xl bg-white px-4'
+          href='mailto:contact@unit214.de'
+        >
+          <span className='hidden text-sm font-semibold lg:flex'>
+            Let's get in touch!
+          </span>
+          <FiMail />
+        </Link>
+      </div>
     </div>
   );
 }
