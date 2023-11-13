@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import * as React from 'react';
 import { FiMail } from 'react-icons/fi';
 
@@ -20,18 +21,23 @@ export default function Header({
         className
       )}
     >
-      <NextImage
-        src='/svg/unit214_bw.svg'
-        useSkeleton
-        alt='Icon'
-        width='120'
-        height='100'
-      />
+      <Link href='/'>
+        <NextImage
+          src='/svg/unit214_bw.svg'
+          useSkeleton
+          alt='Icon'
+          width='120'
+          height='100'
+        />
+      </Link>
       <div className='grow'></div>
-      <button className='flex h-9 w-44 items-center justify-center gap-1.5 rounded-2xl bg-white'>
+      <Link
+        className='flex h-9 w-44 items-center justify-center gap-1.5 rounded-2xl bg-white'
+        href='mailto:contact@unit214.de'
+      >
         <span className='text-sm font-semibold'>Let's get in touch!</span>
         <FiMail />
-      </button>
+      </Link>
     </div>
   );
 }
