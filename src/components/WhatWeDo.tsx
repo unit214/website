@@ -1,6 +1,6 @@
 export function WhatWeDo() {
   return (
-    <div className='h- flex h-[700px] w-full items-center justify-center'>
+    <div className='flex h-[800px] w-full items-center justify-center px-10 lg:h-[700px]'>
       <div className='flex flex-wrap items-start gap-10 lg:flex-nowrap'>
         <h1 className='whitespace-nowrap'>What We Do</h1>
         <div className='max-w-[430px] text-xl font-normal'>
@@ -12,8 +12,7 @@ export function WhatWeDo() {
           addition, we consult in the specialized areas of{' '}
           <a className='font-semibold'>Blockchain</a>,{' '}
           <a className='font-semibold'>Machine Learning</a> and{' '}
-          <a className='font-semibold'>Cloud-</a>{' '}
-          <a className='font-semibold'>Native Computing</a>.
+          <a className='font-semibold'>Cloud-Native Computing</a>.
         </div>
       </div>
     </div>
