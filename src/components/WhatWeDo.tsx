@@ -3,7 +3,7 @@ export function WhatWeDo() {
     <div className='flex h-[800px] w-full items-center justify-center px-10 lg:h-[700px]'>
       <div className='flex flex-wrap items-start gap-10 lg:flex-nowrap'>
         <h1 className='whitespace-nowrap'>What We Do</h1>
-        <div className='max-w-[430px] text-xl font-normal'>
+        <div className='font-primary max-w-[430px] text-xl font-light'>
           With our experience as well as our transparent and flexible work, we
           always meet our clients' needs by providing{' '}
           <span className='font-semibold'>Full-Stack Development</span>,{' '}

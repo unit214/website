@@ -43,7 +43,7 @@ export default function Header({
           className='flex h-9 items-center justify-center gap-1.5 rounded-2xl bg-white px-4'
           href='mailto:contact@unit214.de'
         >
-          <span className='hidden text-sm font-semibold lg:flex'>
+          <span className='font-primary hidden text-sm font-semibold lg:flex'>
             Let's get in touch!
           </span>
           <FiMail />

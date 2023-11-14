@@ -9,6 +9,24 @@
   }
 }
 
+@layer utilities {
+  .custom-angled-rectangle-cyan-animated {
+    animation: angleChangeCyan 20s infinite;
+  }
+
+  .custom-angled-rectangle-cyan-animated-mobile {
+    animation: angleChangeCyanMobile 20s infinite;
+  }
+
+  .custom-angled-rectangle-cyan {
+    clip-path: polygon(0% 0%, 100% 0%, 98.76% 91.43%, 3.13% 100%);
+  }
+
+  .custom-angled-rectangle-yellow {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
+  }
+}
+
 /*
 How clip-path: polygon() works:
 
@@ -49,23 +67,5 @@ y
   }
   50% {
     clip-path: polygon(0% 0%, 99% 0%, 97% 92%, 2% 99%);
-  }
-}
-
-@layer utilities {
-  .custom-angled-rectangle-cyan-animated {
-    animation: angleChangeCyan 20s infinite;
-  }
-
-  .custom-angled-rectangle-cyan-animated-mobile {
-    animation: angleChangeCyanMobile 20s infinite;
-  }
-
-  .custom-angled-rectangle-cyan {
-    clip-path: polygon(0% 0%, 100% 0%, 98.76% 91.43%, 3.13% 100%);
-  }
-
-  .custom-angled-rectangle-yellow {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
   }
 }
