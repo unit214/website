@@ -32,7 +32,7 @@ export function OurMission() {
               className='absolute -bottom-2 left-0'
             />
           </span>
-          <span className='relative inline-flex lg:hidden'>
+          <span className='relative lg:hidden'>
             growth and
             <NextImage
               src='/svg/text-underline-short.svg'
@@ -43,7 +43,8 @@ export function OurMission() {
               className='absolute -bottom-2 left-0'
             />
           </span>
-          <span className='relative flex lg:hidden'>
+          <br className='lg:hidden' />
+          <span className='relative lg:hidden'>
             collaboration.
             <NextImage
               src='/svg/text-underline-short.svg'
