@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['IBM Plex', ...defaultTheme.fontFamily.sans],
+        primary: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
         mono: ['JetBrains Mono', ...defaultTheme.fontFamily.sans],
       },
       colors: {
