@@ -4,8 +4,9 @@ import * as React from 'react';
 
 import AmberBox from '@/components/AmberBox';
 import CyanBoxAndHeader from '@/components/CyanBoxAndHeader';
-import { OurMission } from '@/components/OurMission';
-import { WhatWeDo } from '@/components/WhatWeDo';
+import OurMission from '@/components/OurMission';
+import WhatWeDo from '@/components/WhatWeDo';
+import WhoWeAre from '@/components/WhoWeAre';
 
 /**
  * SVGR Support
@@ -24,6 +25,7 @@ export default function HomePage() {
         <div className='flex w-full flex-col items-center justify-center'>
           <WhatWeDo />
           <OurMission />
+          <WhoWeAre />
         </div>
       </div>
     </main>

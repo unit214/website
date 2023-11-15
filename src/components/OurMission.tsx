@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import NextImage from '@/components/NextImage';
 
-export function OurMission() {
+export default function OurMission() {
   return (
     <div className='-z-10 flex h-[700px] w-full items-center justify-center bg-neutral-100 px-10 lg:h-[500px] lg:max-w-[1300px]'>
       <div className='flex flex-col items-stretch gap-28 lg:flex-row lg:items-center lg:gap-20'>
@@ -11,11 +11,11 @@ export function OurMission() {
             Tailored{' '}
             <NextImage
               src='/svg/text-ellipsis.svg'
-              useSkeleton
-              alt='Icon'
+              alt='text-ellipsis'
               width='130'
               height='34'
               className='absolute -left-3 -top-3'
+              useSkeleton
             />
           </span>
           tech solutions
@@ -25,22 +25,22 @@ export function OurMission() {
             growth and collaboration.
             <NextImage
               src='/svg/text-underline.svg'
-              useSkeleton
-              alt='Icon'
+              alt='text-underline'
               width='350'
               height='34'
               className='absolute -bottom-2 left-0'
+              useSkeleton
             />
           </span>
           <span className='relative lg:hidden'>
             growth and
             <NextImage
               src='/svg/text-underline-short.svg'
-              useSkeleton
-              alt='Icon'
+              alt='text-underline-short'
               width='155'
               height='34'
               className='absolute -bottom-2 left-0'
+              useSkeleton
             />
           </span>
           <br className='lg:hidden' />
@@ -48,11 +48,11 @@ export function OurMission() {
             collaboration.
             <NextImage
               src='/svg/text-underline-short.svg'
-              useSkeleton
-              alt='Icon'
+              alt='text-underline-short'
               width='180'
               height='34'
               className='absolute -bottom-2 left-0'
+              useSkeleton
             />
           </span>
         </h1>

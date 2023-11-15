@@ -1,4 +1,4 @@
-export function WhatWeDo() {
+export default function WhatWeDo() {
   return (
     <div className='flex h-[500px] w-full items-center justify-center px-10'>
       <div className='flex flex-wrap items-start gap-6 lg:flex-nowrap lg:gap-10'>
