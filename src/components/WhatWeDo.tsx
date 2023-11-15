@@ -1,7 +1,7 @@
 export function WhatWeDo() {
   return (
-    <div className='flex h-[800px] w-full items-center justify-center px-10 lg:h-[700px]'>
-      <div className='flex flex-wrap items-start gap-10 lg:flex-nowrap'>
+    <div className='flex h-[500px] w-full items-center justify-center px-10'>
+      <div className='flex flex-wrap items-start gap-6 lg:flex-nowrap lg:gap-10'>
         <h1 className='whitespace-nowrap'>What We Do</h1>
         <div className='font-primary max-w-[430px] text-xl font-light'>
           With our experience as well as our transparent and flexible work, we

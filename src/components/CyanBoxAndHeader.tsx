@@ -13,7 +13,7 @@ export default function CyanBoxAndHeader() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const offsetTop = window.innerWidth < 1024 ? 540 : 690;
+      const offsetTop = window.innerWidth < 1024 ? 390 : 540;
       // Start increasing opacity of header once offsetTop is reached
       if (scrollTop >= offsetTop) {
         setHeaderOpacity(Math.min(1, (scrollTop - offsetTop) / 150));
@@ -35,7 +35,7 @@ export default function CyanBoxAndHeader() {
   }, []);
 
   function scrollDown() {
-    const offsetTop = window.innerWidth < 1024 ? 540 : 690;
+    const offsetTop = window.innerWidth < 1024 ? 390 : 540;
     window.scroll({
       top: offsetTop + 150,
       left: 0,
@@ -56,10 +56,10 @@ export default function CyanBoxAndHeader() {
             {scrollDownButtonOpacity > 0 && (
               <button
                 style={{ opacity: scrollDownButtonOpacity }}
-                className='absolute bottom-12 flex max-w-[1300px] flex-col items-center gap-4 pl-6 text-white lg:pl-24'
+                className='absolute bottom-12 flex max-w-[1300px] flex-col items-center gap-1 pl-6 text-white lg:gap-4 lg:pl-24'
                 onClick={scrollDown}
               >
-                <div className='text-xs font-light [writing-mode:vertical-lr]'>
+                <div className='text-xs font-extralight [writing-mode:vertical-lr]'>
                   WHAT WE DO
                 </div>
                 <CgMouse className='hidden lg:flex' size={40} />
