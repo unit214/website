@@ -6,8 +6,10 @@ export default function MainClaim() {
       <span className='text-white/50'> UNLOCK YOUR </span> POTENTIAL
       <br />
       <span className='text-white/50'> WITH OUR </span> FULL STACK DEVELOPMENT
-      <br className='hidden lg:flex' />
-      <span className='text-white/50'> AND </span> IT CONSULTING
+      <br className='hidden sm:inline-flex' />
+      <span className='text-white/50'> AND </span>{' '}
+      <br className='inline-flex sm:hidden' />
+      IT CONSULTING
     </div>
   );
 }
