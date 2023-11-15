@@ -59,7 +59,7 @@ export default function CyanBoxAndHeader() {
                 className='absolute bottom-12 flex max-w-[1300px] flex-col items-center gap-1 pl-6 text-white lg:gap-4 lg:pl-24'
                 onClick={scrollDown}
               >
-                <div className='text-xs font-extralight [writing-mode:vertical-lr]'>
+                <div className='text-xs font-light [writing-mode:vertical-lr]'>
                   WHAT WE DO
                 </div>
                 <CgMouse className='hidden lg:flex' size={40} />
