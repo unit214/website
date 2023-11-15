@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import * as React from 'react';
 import { FiMail } from 'react-icons/fi';
 
 import { cn } from '@/lib/utils';

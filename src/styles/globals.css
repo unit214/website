@@ -138,6 +138,30 @@
   .custom-angled-rectangle-amber-header {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
   }
+
+  .custom-angled-rectangle-amber-testimonials {
+    clip-path: polygon(0% 3%, 98% 0%, 100% 100%, 0% 95%);
+  }
+
+  .custom-angled-rectangle-amber-testimonials-mobile {
+    clip-path: polygon(2% 0%, 98% 0%, 100% 100%, 1% 95%);
+  }
+
+  .custom-angled-rectangle-red-testimonials {
+    clip-path: polygon(2.5% 0%, 100% 1.5%, 98.5% 97%, 0% 100%);
+  }
+
+  .custom-angled-rectangle-red-testimonials-mobile {
+    clip-path: polygon(0% 0%, 100% 1.5%, 100% 97%, 0% 100%);
+  }
+
+  .gradient-mask-r-90 {
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 90%,
+      transparent 100%
+    );
+  }
 }
 
 /*

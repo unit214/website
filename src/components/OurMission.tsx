@@ -1,10 +1,8 @@
-import * as React from 'react';
-
 import NextImage from '@/components/NextImage';
 
 export default function OurMission() {
   return (
-    <div className='-z-10 flex h-[700px] w-full items-center justify-center bg-neutral-100 px-10 lg:h-[500px] lg:max-w-[1300px]'>
+    <div className='flex h-[700px] w-full items-center justify-center bg-neutral-100 px-10 lg:h-[500px] lg:max-w-[1300px]'>
       <div className='flex flex-col items-stretch gap-28 lg:flex-row lg:items-center lg:gap-20'>
         <h1>
           <span className='relative'>

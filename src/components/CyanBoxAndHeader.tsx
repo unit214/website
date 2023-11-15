@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { BsArrowDownShort } from 'react-icons/bs';
 import { CgMouse } from 'react-icons/cg';
@@ -44,7 +43,7 @@ export default function CyanBoxAndHeader() {
   }
 
   return (
-    <div className='sticky -top-[540px] lg:-top-[690px]'>
+    <div className='sticky -top-[540px] z-10 lg:-top-[690px]'>
       <div className='flex w-full justify-center'>
         <div className='bg-primary-cyan custom-angled-rectangle-cyan-animated-mobile lg:custom-angled-rectangle-cyan-animated flex h-[700px] w-full flex-col justify-center lg:h-[850px] lg:w-[1300px]'>
           <Header className='absolute top-0' />

@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 export default function MainClaim() {
   return (
     <div className='text-main-mobile lg:text-main px-10 font-mono font-extrabold text-white lg:px-28'>
