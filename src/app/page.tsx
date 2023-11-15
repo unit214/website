@@ -1,10 +1,9 @@
 'use client';
 
-import * as React from 'react';
-
 import AmberBox from '@/components/AmberBox';
 import CyanBoxAndHeader from '@/components/CyanBoxAndHeader';
 import OurMission from '@/components/OurMission';
+import Testimonials from '@/components/Testimonials';
 import WhatWeDo from '@/components/WhatWeDo';
 import WhoWeAre from '@/components/WhoWeAre';
 
@@ -19,13 +18,14 @@ import WhoWeAre from '@/components/WhoWeAre';
 export default function HomePage() {
   return (
     <main>
-      <div className='h-[4000px]'>
+      <div className='relative h-[4000px]'>
         <AmberBox />
         <CyanBoxAndHeader />
         <div className='flex w-full flex-col items-center justify-center'>
           <WhatWeDo />
           <OurMission />
           <WhoWeAre />
+          <Testimonials />
         </div>
       </div>
     </main>
