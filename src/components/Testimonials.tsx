@@ -51,20 +51,23 @@ export default function Testimonials() {
   return (
     <div className='relative flex h-[700px] w-full items-center justify-center lg:max-w-[1300px]'>
       <TestimonialSectionAmberBox />
-      <div className='bg-primary-red custom-angled-rectangle-red-testimonials-mobile lg:custom-angled-rectangle-red-testimonials h-[600px] w-full px-40 lg:h-[600px] lg:max-w-[1200px]'>
+      <div className='bg-primary-red custom-angled-rectangle-red-testimonials-mobile lg:custom-angled-rectangle-red-testimonials h-[600px] w-full lg:h-[600px] lg:max-w-[1200px] '>
         <div className='flex h-full flex-col justify-center gap-12 text-white'>
-          <h1>
+          <h1 className='mx-14 lg:mx-40'>
             Why people love
             <br />
             to work with us.
           </h1>
-          <div className='flex justify-between gap-5'>
+          <div className='hidden justify-between gap-5 lg:mx-40 lg:flex'>
             {randomTestimonials.map((testimonial, index) => (
               <TestimonialText key={index} testimonial={testimonial} />
             ))}
           </div>
+          <div className='mx-14 flex lg:hidden'>
+            <TestimonialText testimonial={TESTIMONIALS[0]} />
+          </div>
           <div
-            className='gradient-mask-r-90 scrollbar-none flex max-w-full gap-5 overflow-y-hidden'
+            className='gradient-mask-r-90 scrollbar-none flex max-w-full gap-5 overflow-y-hidden lg:mx-40 '
             style={{ overflow: '-moz-scrollbars-none' }}
           >
             {TESTIMONIAL_LOGOS.map((logo, index) => (
