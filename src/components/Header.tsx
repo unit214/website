@@ -32,10 +32,10 @@ export default function Header({
         <button onClick={scrollUp}>
           <NextImage
             src='/svg/unit214_bw.svg'
-            useSkeleton
-            alt='Icon'
+            alt='unit214-logo'
             width='120'
             height='100'
+            useSkeleton
           />
         </button>
         <div className='grow'></div>

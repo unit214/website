@@ -1,0 +1,6 @@
+<svg width="89" height="70" viewBox="0 0 89 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="35.5" cy="34.5" r="32" transform="rotate(90 35.5 34.5)" stroke="black" stroke-width="3"/>
+<circle cx="55.5" cy="34" r="32" transform="rotate(90 55.5 34)" stroke="black" stroke-width="3"/>
+<circle cx="80.5" cy="12.5" r="7" transform="rotate(90 80.5 12.5)" stroke="#F489A0" stroke-width="3"/>
+<path d="M9.5 64.5C9.5 66.7091 7.70914 68.5 5.5 68.5C3.29086 68.5 1.5 66.7091 1.5 64.5C1.5 62.2909 3.29086 60.5 5.5 60.5C7.70914 60.5 9.5 62.2909 9.5 64.5Z" stroke="black" stroke-width="3"/>
+</svg>
