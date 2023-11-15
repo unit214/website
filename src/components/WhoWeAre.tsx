@@ -2,7 +2,44 @@ import Link from 'next/link';
 import * as React from 'react';
 import { ReactElement } from 'react';
 
+import { cn } from '@/lib/utils';
+
 import NextImage from '@/components/NextImage';
+
+function ExternalReferences({
+  linkedInLink,
+  gitHubLink,
+  size,
+  className,
+}: {
+  linkedInLink: string;
+  gitHubLink: string;
+  size: number;
+  className?: string;
+}) {
+  return (
+    <div className={cn('gap-1', className)}>
+      <Link href={linkedInLink} target='_blank'>
+        <NextImage
+          src='/svg/linkedin.svg'
+          alt='linkedin-logo'
+          width={size}
+          height={size}
+          useSkeleton
+        />
+      </Link>
+      <Link href={gitHubLink} target='_blank'>
+        <NextImage
+          src='/svg/github.svg'
+          alt='github-logo'
+          width={size}
+          height={size}
+          useSkeleton
+        />
+      </Link>
+    </div>
+  );
+}
 
 function EmployeeField({
   imgSource,
@@ -18,7 +55,7 @@ function EmployeeField({
   gitHubLink: string;
 }) {
   return (
-    <div className='flex items-center gap-16'>
+    <div className='flex items-start justify-between gap-16 lg:items-center lg:justify-start'>
       <NextImage
         src={imgSource}
         alt='logo'
@@ -30,30 +67,21 @@ function EmployeeField({
       <div className='flex flex-col gap-2.5'>
         <div className='flex items-center gap-2'>
           <div className='font-primary text-xl font-semibold'>{name}</div>
-          <div className='flex gap-1'>
-            <Link href={linkedInLink} target='_blank'>
-              <NextImage
-                src='/svg/linkedin.svg'
-                alt='linkedin-logo'
-                width='16'
-                height='16'
-                useSkeleton
-              />
-            </Link>
-            <Link href={gitHubLink} target='_blank'>
-              <NextImage
-                src='/svg/github.svg'
-                alt='github-logo'
-                width='16'
-                height='16'
-                useSkeleton
-              />
-            </Link>
-          </div>
+          <ExternalReferences
+            linkedInLink={linkedInLink}
+            gitHubLink={gitHubLink}
+            size={16}
+            className='hidden lg:flex'
+          />
         </div>
         <span className='font-primary text-xs font-light'>{description}</span>
       </div>
-      <div />
+      <ExternalReferences
+        linkedInLink={linkedInLink}
+        gitHubLink={gitHubLink}
+        size={25}
+        className='flex lg:hidden'
+      />
     </div>
   );
 }
@@ -61,7 +89,7 @@ function EmployeeField({
 export default function WhoWeAre() {
   return (
     <div className='flex h-[600px] w-full items-center justify-center px-10'>
-      <div className='flex flex-wrap items-start gap-10 lg:flex-nowrap lg:gap-20'>
+      <div className='flex flex-col items-start gap-10 lg:flex-row lg:gap-20'>
         <h1 className='whitespace-nowrap'>Who We Are</h1>
         <div className='flex flex-col gap-10'>
           <EmployeeField
