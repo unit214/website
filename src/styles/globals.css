@@ -131,20 +131,20 @@
     animation: angleChangeCyanMobile 20s infinite;
   }
 
+  .custom-angled-rectangle-amber-animated-testimonials {
+    animation: angleChangeAmber 20s infinite;
+  }
+
+  .custom-angled-rectangle-amber-testimonials-animated-mobile {
+    animation: angleChangeAmberMobile 20s infinite;
+  }
+
   .custom-angled-rectangle-cyan {
     clip-path: polygon(0% 0%, 100% 0%, 98.76% 91.43%, 3.13% 100%);
   }
 
   .custom-angled-rectangle-amber-header {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
-  }
-
-  .custom-angled-rectangle-amber-testimonials {
-    clip-path: polygon(0% 3%, 98% 0%, 100% 100%, 0% 95%);
-  }
-
-  .custom-angled-rectangle-amber-testimonials-mobile {
-    clip-path: polygon(2% 0%, 98% 0%, 100% 100%, 1% 95%);
   }
 
   .custom-angled-rectangle-red-testimonials {
@@ -205,5 +205,25 @@ y
   }
   50% {
     clip-path: polygon(0% 0%, 99% 0%, 97% 92%, 2% 99%);
+  }
+}
+
+@keyframes angleChangeAmber {
+  0%,
+  100% {
+    clip-path: polygon(0% 3%, 98% 0%, 100% 100%, 0% 95%);
+  }
+  50% {
+    clip-path: polygon(1% 2%, 99% 0%, 99% 99%, 2% 96%);
+  }
+}
+
+@keyframes angleChangeAmberMobile {
+  0%,
+  100% {
+    clip-path: polygon(0% 3%, 98% 0%, 100% 100%, 0% 95%);
+  }
+  50% {
+    clip-path: polygon(0% 2%, 96% 2%, 99% 97%, 0% 97%);
   }
 }

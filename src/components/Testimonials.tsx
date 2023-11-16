@@ -9,7 +9,7 @@ import { TESTIMONIAL_LOGOS, TESTIMONIALS } from '@/constant/testimonials';
 
 function TestimonialSectionAmberBox() {
   return (
-    <div className='bg-primary-amber custom-angled-rectangle-amber-testimonials absolute left-0 h-[700px] w-[80%] lg:w-[500px]' />
+    <div className='bg-primary-amber custom-angled-rectangle-amber-testimonials-animated-mobile lg:custom-angled-rectangle-amber-animated-testimonials absolute left-0 h-[700px] w-[80%] lg:w-[500px]' />
   );
 }
 
