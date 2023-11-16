@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { getRandomElements } from '@/lib/utils';
+import { getRandomElements, isMobile } from '@/lib/utils';
 
 import NextImage from '@/components/NextImage';
 
@@ -15,7 +15,7 @@ function TestimonialSectionAmberBox() {
 
 function TestimonialText({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <span className='font-primary w-60 text-left text-xs font-light'>
+    <span className='font-primary text-left text-xs font-light lg:w-60'>
       <span className='font-medium'>— {testimonial.source}</span>
       <br />
       <br />
@@ -42,18 +42,34 @@ export default function Testimonials() {
   const [randomTestimonials, setRandomTestimonials] = useState<Testimonial[]>(
     []
   );
+  const [index, setIndex] = useState(0);
+  const [opacity, setOpacity] = useState<number>(1);
 
   useEffect(() => {
     const random: Testimonial[] = getRandomElements(TESTIMONIALS, 3);
     setRandomTestimonials(random);
+
+    if (isMobile()) {
+      const changeText = () => {
+        setOpacity(0);
+        setTimeout(() => {
+          setIndex((prevIndex) => (prevIndex + 1) % TESTIMONIALS.length);
+          setOpacity(100);
+        }, 700); // fade duration
+      };
+
+      const timer = setInterval(changeText, 5000 + 700); // Time to show text + fade-out duration
+
+      return () => clearInterval(timer);
+    }
   }, []);
 
   return (
     <div className='relative flex h-[700px] w-full items-center justify-center lg:max-w-[1300px]'>
       <TestimonialSectionAmberBox />
       <div className='bg-primary-red custom-angled-rectangle-red-testimonials-mobile lg:custom-angled-rectangle-red-testimonials h-[600px] w-full lg:h-[600px] lg:max-w-[1200px] '>
-        <div className='flex h-full flex-col justify-center gap-12 text-white'>
-          <h1 className='mx-14 lg:mx-40'>
+        <div className='flex h-full flex-col justify-between gap-5 py-20 text-white'>
+          <h1 className='mx-10 lg:mx-40'>
             Why people love
             <br />
             to work with us.
@@ -63,8 +79,11 @@ export default function Testimonials() {
               <TestimonialText key={index} testimonial={testimonial} />
             ))}
           </div>
-          <div className='mx-14 flex lg:hidden'>
-            <TestimonialText testimonial={TESTIMONIALS[0]} />
+          <div
+            className='mx-10 flex transition-opacity duration-700 ease-in-out lg:hidden'
+            style={{ opacity: opacity }}
+          >
+            <TestimonialText testimonial={TESTIMONIALS[index]} />
           </div>
           <div
             className='gradient-mask-r-90 scrollbar-none flex max-w-full gap-5 overflow-y-hidden lg:mx-40 '

@@ -21,3 +21,7 @@ export function getRandomElements<T>(arr: T[], count: number): T[] {
 
   return shuffled.slice(0, count);
 }
+
+export function isMobile(): boolean {
+  return window.innerWidth < 1024;
+}
