@@ -54,7 +54,7 @@ function EmployeeField({
   gitHubLink: string;
 }) {
   return (
-    <div className='flex items-start justify-between gap-16 lg:items-center lg:justify-start'>
+    <div className='flex items-start justify-between gap-5 lg:items-center lg:justify-start lg:gap-16'>
       <NextImage
         src={imgSource}
         alt='logo'
@@ -87,8 +87,8 @@ function EmployeeField({
 
 export default function WhoWeAre() {
   return (
-    <div className='flex h-[600px] w-full items-center justify-center px-10'>
-      <div className='flex flex-col items-start gap-10 lg:flex-row lg:gap-20'>
+    <div className='flex w-full justify-center px-10 py-14 lg:py-32'>
+      <div className='flex w-[430px] flex-col gap-10 lg:w-fit lg:flex-row lg:items-start lg:gap-20'>
         <h1 className='whitespace-nowrap'>Who We Are</h1>
         <div className='flex flex-col gap-10'>
           <EmployeeField
