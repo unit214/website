@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { BsArrowDownShort } from 'react-icons/bs';
 import { CgMouse } from 'react-icons/cg';
 
+import { isMobile } from '@/lib/utils';
+
 import Header from '@/components/Header';
 import MainClaim from '@/components/MainClaim';
 
@@ -12,7 +14,7 @@ export default function CyanBoxAndHeader() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const offsetTop = window.innerWidth < 1024 ? 390 : 540;
+      const offsetTop = isMobile() ? 390 : 540;
       // Start increasing opacity of header once offsetTop is reached
       if (scrollTop >= offsetTop) {
         setHeaderOpacity(Math.min(1, (scrollTop - offsetTop) / 150));
@@ -34,7 +36,7 @@ export default function CyanBoxAndHeader() {
   }, []);
 
   function scrollDown() {
-    const offsetTop = window.innerWidth < 1024 ? 390 : 540;
+    const offsetTop = isMobile() ? 390 : 540;
     window.scroll({
       top: offsetTop + 150,
       left: 0,
