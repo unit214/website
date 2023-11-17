@@ -8,8 +8,8 @@ function TailoredTechSolutions() {
         <NextImage
           src='/svg/text-ellipsis.svg'
           alt='text-ellipsis'
-          width='135'
-          height='34'
+          width={135}
+          height={0}
           className='absolute -left-3.5 -top-2.5'
           useSkeleton
         />
@@ -22,8 +22,8 @@ function TailoredTechSolutions() {
         <NextImage
           src='/svg/text-underline.svg'
           alt='text-underline'
-          width='350'
-          height='34'
+          width={350}
+          height={0}
           className='absolute -bottom-1.5 left-0'
           useSkeleton
         />
@@ -33,8 +33,8 @@ function TailoredTechSolutions() {
         <NextImage
           src='/svg/text-underline-short.svg'
           alt='text-underline-short'
-          width='155'
-          height='34'
+          width={155}
+          height={34}
           className='absolute -bottom-1.5 left-0'
           useSkeleton
         />
@@ -45,8 +45,8 @@ function TailoredTechSolutions() {
         <NextImage
           src='/svg/text-underline-short.svg'
           alt='text-underline-short'
-          width='185'
-          height='34'
+          width={185}
+          height={34}
           className='absolute -bottom-1.5 left-0'
           useSkeleton
         />

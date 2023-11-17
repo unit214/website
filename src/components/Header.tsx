@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FiMail } from 'react-icons/fi';
 
 import { cn } from '@/lib/utils';
@@ -15,10 +14,17 @@ export default function Header({
   function scrollUp() {
     window.scroll({
       top: 0,
-      left: 0,
       behavior: 'smooth',
     });
   }
+
+  function scrollDown() {
+    window.scroll({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  }
+
   return (
     <div>
       <div
@@ -32,21 +38,21 @@ export default function Header({
           <NextImage
             src='/svg/unit214_bw.svg'
             alt='unit214-logo'
-            width='120'
-            height='100'
+            width={120}
+            height={0}
             useSkeleton
           />
         </button>
         <div className='grow'></div>
-        <Link
-          className='flex h-9 items-center justify-center gap-1.5 rounded-2xl bg-white px-4'
-          href='mailto:contact@unit214.de'
+        <button
+          className='flex h-9 w-fit items-center justify-center gap-1.5 rounded-full bg-white px-4'
+          onClick={scrollDown}
         >
           <span className='font-primary hidden text-sm font-semibold lg:flex'>
             Let's get in touch!
           </span>
           <FiMail />
-        </Link>
+        </button>
       </div>
     </div>
   );
