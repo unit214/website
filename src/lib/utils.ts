@@ -7,19 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getRandomElements<T>(arr: T[], count: number): T[] {
-  const shuffled = arr.slice();
-  let i = arr.length;
-  let temp: T, index: number;
-
-  // Fisher-Yates shuffle algorithm
-  while (i--) {
-    index = Math.floor((i + 1) * Math.random());
-    temp = shuffled[i];
-    shuffled[i] = shuffled[index];
-    shuffled[index] = temp;
-  }
-
-  return shuffled.slice(0, count);
+  return arr.sort(() => 0.5 - Math.random()).slice(0, count);
 }
 
 export function isMobile(): boolean {
