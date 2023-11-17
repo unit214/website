@@ -34,7 +34,7 @@ function TailoredTechSolutions() {
           src='/svg/text-underline-short.svg'
           alt='text-underline-short'
           width={155}
-          height={34}
+          height={0}
           className='absolute -bottom-1.5 left-0'
           useSkeleton
         />
@@ -46,7 +46,7 @@ function TailoredTechSolutions() {
           src='/svg/text-underline-short.svg'
           alt='text-underline-short'
           width={185}
-          height={34}
+          height={0}
           className='absolute -bottom-1.5 left-0'
           useSkeleton
         />
