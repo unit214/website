@@ -2,6 +2,7 @@
 
 import AmberBox from '@/components/AmberBox';
 import CyanBoxAndHeader from '@/components/CyanBoxAndHeader';
+import Footer from '@/components/Footer';
 import OurMission from '@/components/OurMission';
 import Testimonials from '@/components/Testimonials';
 import WhatWeDo from '@/components/WhatWeDo';
@@ -18,7 +19,7 @@ import WhoWeAre from '@/components/WhoWeAre';
 export default function HomePage() {
   return (
     <main>
-      <div className='relative h-[4000px]'>
+      <div className='relative'>
         <AmberBox />
         <CyanBoxAndHeader />
         <div className='flex w-full flex-col items-center justify-center'>
@@ -26,6 +27,7 @@ export default function HomePage() {
           <OurMission />
           <WhoWeAre />
           <Testimonials />
+          <Footer />
         </div>
       </div>
     </main>

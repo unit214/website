@@ -58,8 +58,8 @@ function EmployeeField({
       <NextImage
         src={imgSource}
         alt='logo'
-        width='85'
-        height='72'
+        width={85}
+        height={0}
         className='hidden lg:inline-flex'
         useSkeleton
       />
