@@ -15,12 +15,10 @@ function TestimonialSectionAmberBox() {
 
 function TestimonialText({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <span className='font-primary text-left text-xs font-light lg:w-60'>
+    <div className='font-primary flex flex-col gap-4 text-left text-xs font-light lg:w-60'>
+      <span>"{testimonial.text}"</span>
       <span className='font-medium'>— {testimonial.source}</span>
-      <br />
-      <br />
-      <p>"{testimonial.text}"</p>
-    </span>
+    </div>
   );
 }
 
@@ -58,7 +56,7 @@ export default function Testimonials() {
         }, 700); // fade duration
       };
 
-      const timer = setInterval(changeText, 5000 + 700); // Time to show text + fade-out duration
+      const timer = setInterval(changeText, 10000 + 700); // Time to show text + fade-out duration
 
       return () => clearInterval(timer);
     }
