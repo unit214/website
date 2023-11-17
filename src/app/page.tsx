@@ -3,6 +3,7 @@
 import AmberBox from '@/components/AmberBox';
 import CyanBoxAndHeader from '@/components/CyanBoxAndHeader';
 import Footer from '@/components/Footer';
+import LetsGetInTouch from '@/components/LetsGetInTouch';
 import OurMission from '@/components/OurMission';
 import Testimonials from '@/components/Testimonials';
 import WhatWeDo from '@/components/WhatWeDo';
@@ -27,7 +28,8 @@ export default function HomePage() {
           <OurMission />
           <WhoWeAre />
           <Testimonials />
-          <Footer />
+          <LetsGetInTouch />
+          <Footer text='Imprint' link='/imprint' />
         </div>
       </div>
     </main>
