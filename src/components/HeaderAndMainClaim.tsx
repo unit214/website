@@ -4,7 +4,7 @@ import { CgMouse } from 'react-icons/cg';
 
 import { isMobile } from '@/lib/utils';
 
-import CyanBox from '@/components/CyanBox';
+import CyanAmberHeaderBox from '@/components/CyanAmberHeaderBox';
 import Header from '@/components/Header';
 import MainClaim from '@/components/MainClaim';
 
@@ -46,7 +46,7 @@ export default function HeaderAndMainClaim() {
   }
 
   return (
-    <CyanBox className='sticky'>
+    <CyanAmberHeaderBox className='sticky'>
       <div className='flex h-full w-full flex-col justify-center'>
         <Header
           className='absolute top-0'
@@ -76,6 +76,6 @@ export default function HeaderAndMainClaim() {
           </button>
         )}
       </div>
-    </CyanBox>
+    </CyanAmberHeaderBox>
   );
 }

@@ -1,6 +1,5 @@
 'use client';
 
-import AmberBox from '@/components/AmberBox';
 import Footer from '@/components/Footer';
 import HeaderAndMainClaim from '@/components/HeaderAndMainClaim';
 import LetsGetInTouch from '@/components/LetsGetInTouch';
@@ -21,7 +20,6 @@ export default function HomePage() {
   return (
     <main>
       <div className='relative'>
-        <AmberBox />
         <HeaderAndMainClaim />
         <div className='flex w-full flex-col items-center justify-center'>
           <WhatWeDo />
