@@ -13,7 +13,11 @@ export default function HeaderFooterLayout({
   return (
     <div className='relative'>
       <CyanBox className='fixed w-full lg:left-1/2 lg:-translate-x-1/2'>
-        <Header className='absolute bottom-10' clickOnLogoBehaviour='goHome' />
+        <Header
+          className='absolute bottom-10'
+          clickOnLogoBehaviour='goHome'
+          clickOnContactBehaviour='sendMail'
+        />
       </CyanBox>
       <div className='flex w-full flex-col items-center justify-center pt-[160px]'>
         <div className='flex-1'>{children}</div>
