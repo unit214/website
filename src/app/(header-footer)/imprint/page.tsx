@@ -39,7 +39,7 @@ export default function ImprintPage() {
       </div>
 
       <div className='flex flex-col items-center gap-5'>
-        <h1>Kontakt</h1>
+        <h2>Kontakt</h2>
         <p className='text-center'>
           Telefon: +49 (0)89 31908366
           <br />
@@ -48,7 +48,7 @@ export default function ImprintPage() {
       </div>
 
       <div className='flex flex-col items-center gap-5'>
-        <h1>Umsatzsteuer-ID</h1>
+        <h2>Umsatzsteuer-ID</h2>
         <p className='text-center'>
           Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
           <br />
@@ -57,7 +57,9 @@ export default function ImprintPage() {
       </div>
 
       <div className='flex flex-col items-center gap-5'>
-        <h1>EU-Streitschlichtung</h1>
+        <h2 lang='de' className='hyphens-auto'>
+          EU-Streitschlichtung
+        </h2>
         <p className='text-center'>
           Die Europäische Kommission stellt eine Plattform zur
           Online-Streitbeilegung (OS) bereit:{' '}
@@ -68,9 +70,10 @@ export default function ImprintPage() {
         </p>
       </div>
       <div className='flex flex-col items-center gap-5'>
-        <h1 className='text-center'>
-          Verbraucherstreitbeilegung / Universalschlichtungsstelle
-        </h1>
+        <h2 lang='de' className='hyphens-auto text-center'>
+          Verbraucherstreitbeilegung / <br className='hidden lg:inline-flex' />{' '}
+          Universalschlichtungsstelle
+        </h2>
         <p className='text-center'>
           Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
           vor einer Verbraucherschlichtungsstelle teilzunehmen.
