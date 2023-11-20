@@ -48,12 +48,17 @@ export default function HeaderAndMainClaim() {
   return (
     <CyanBox className='sticky'>
       <div className='flex h-full w-full flex-col justify-center'>
-        <Header className='absolute top-0' clickOnLogoBehaviour='scrollUp' />
+        <Header
+          className='absolute top-0'
+          clickOnLogoBehaviour='scrollUp'
+          clickOnContactBehaviour='scrollDown'
+        />
         {headerOpacity > 0 && (
           <Header
             opacity={headerOpacity}
             className='absolute bottom-10'
             clickOnLogoBehaviour='scrollUp'
+            clickOnContactBehaviour='scrollDown'
           />
         )}
         <MainClaim />

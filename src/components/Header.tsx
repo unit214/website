@@ -16,14 +16,28 @@ function Logo() {
     />
   );
 }
+
+function ContactButtonContent() {
+  return (
+    <div className='flex h-9 w-fit items-center justify-center gap-1.5 rounded-full bg-white px-4'>
+      <span className='font-primary hidden text-sm font-semibold lg:flex'>
+        Let's get in touch!
+      </span>
+      <FiMail />
+    </div>
+  );
+}
+
 export default function Header({
   opacity,
   className,
   clickOnLogoBehaviour,
+  clickOnContactBehaviour,
 }: {
   opacity?: number;
   className?: string;
   clickOnLogoBehaviour: 'scrollUp' | 'goHome';
+  clickOnContactBehaviour: 'scrollDown' | 'sendMail';
 }) {
   function scrollUp() {
     window.scroll({
@@ -58,16 +72,16 @@ export default function Header({
             <Logo />
           </NextLink>
         )}
-        <div className='grow'></div>
-        <button
-          className='flex h-9 w-fit items-center justify-center gap-1.5 rounded-full bg-white px-4'
-          onClick={scrollDown}
-        >
-          <span className='font-primary hidden text-sm font-semibold lg:flex'>
-            Let's get in touch!
-          </span>
-          <FiMail />
-        </button>
+        {clickOnContactBehaviour === 'scrollDown' && (
+          <button onClick={scrollDown}>
+            <ContactButtonContent />
+          </button>
+        )}
+        {clickOnContactBehaviour === 'sendMail' && (
+          <NextLink href='mailto:contact@unit214.de' className='no-underline'>
+            <ContactButtonContent />
+          </NextLink>
+        )}
       </div>
     </div>
   );
