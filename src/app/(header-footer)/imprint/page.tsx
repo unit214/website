@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import NextLink from '@/components/NextLink';
 
 export default function ImprintPage() {
   return (
@@ -64,14 +64,9 @@ export default function ImprintPage() {
         <p className='text-center'>
           Die Europäische Kommission stellt eine Plattform zur
           Online-Streitbeilegung (OS) bereit:{' '}
-          <Link
-            href='https://ec.europa.eu/consumers/odr/'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='underline'
-          >
+          <NextLink href='https://ec.europa.eu/consumers/odr/' isExternalLink>
             https://ec.europa.eu/consumers/odr/
-          </Link>
+          </NextLink>
           .<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.
         </p>
       </div>
@@ -85,14 +80,9 @@ export default function ImprintPage() {
         </p>
         <p className='text-center'>
           Quelle:{' '}
-          <Link
-            href='https://www.e-recht24.de'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='underline'
-          >
+          <NextLink href='https://www.e-recht24.de' isExternalLink>
             e-recht24.de
-          </Link>
+          </NextLink>
         </p>
       </div>
     </div>
