@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import { FiMail } from 'react-icons/fi';
 
 import { cn } from '@/lib/utils';
 
 import NextImage from '@/components/NextImage';
+import NextLink from '@/components/NextLink';
 
 function Logo() {
   return (
@@ -44,7 +44,7 @@ export default function Header({
       <div
         style={{ opacity: opacity }}
         className={cn(
-          `mt-5 flex max-h-[100px] w-full items-start justify-between px-5 lg:mt-12 lg:max-w-[1300px] lg:px-16`,
+          'mt-5 flex max-h-[100px] w-full items-start justify-between px-5 lg:mt-12 lg:max-w-[1300px] lg:px-16',
           className
         )}
       >
@@ -54,9 +54,9 @@ export default function Header({
           </button>
         )}
         {clickOnLogoBehaviour === 'goHome' && (
-          <Link href='/'>
+          <NextLink href='/'>
             <Logo />
-          </Link>
+          </NextLink>
         )}
         <div className='grow'></div>
         <button

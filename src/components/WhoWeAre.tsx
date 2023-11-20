@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import { ReactElement } from 'react';
 
 import { cn } from '@/lib/utils';
 
 import NextImage from '@/components/NextImage';
+import NextLink from '@/components/NextLink';
 
 function ExternalReferences({
   linkedInLink,
@@ -18,7 +18,7 @@ function ExternalReferences({
 }) {
   return (
     <div className={cn('gap-1', className)}>
-      <Link href={linkedInLink} target='_blank'>
+      <NextLink href={linkedInLink} isExternalLink>
         <NextImage
           src='/svg/linkedin.svg'
           alt='linkedin-logo'
@@ -26,8 +26,8 @@ function ExternalReferences({
           height={size}
           useSkeleton
         />
-      </Link>
-      <Link href={gitHubLink} target='_blank'>
+      </NextLink>
+      <NextLink href={gitHubLink} isExternalLink>
         <NextImage
           src='/svg/github.svg'
           alt='github-logo'
@@ -35,7 +35,7 @@ function ExternalReferences({
           height={size}
           useSkeleton
         />
-      </Link>
+      </NextLink>
     </div>
   );
 }

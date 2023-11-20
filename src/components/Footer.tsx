@@ -1,16 +1,12 @@
-import Link from 'next/link';
-
 import NextImage from '@/components/NextImage';
+import NextLink from '@/components/NextLink';
 
 export default function Footer({ text, link }: { text: string; link: string }) {
   return (
     <div className='relative mt-20 flex w-full justify-center pb-4 lg:max-w-[1300px]'>
-      <Link
-        href={link}
-        className='font-primary text-xs text-neutral-700 underline'
-      >
+      <NextLink href={link} className='font-primary text-xs text-neutral-700'>
         {text}
-      </Link>
+      </NextLink>
       <NextImage
         alt='dots'
         src='/svg/grey-dots.svg'
