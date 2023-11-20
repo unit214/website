@@ -2,6 +2,8 @@
 
 import NextLink from '@/components/NextLink';
 
+import { contactEmail } from '@/constant/contact';
+
 export default function ImprintPage() {
   return (
     <div className='font-primary flex max-w-[500px] flex-col items-center gap-10 px-10 font-light'>
@@ -41,12 +43,7 @@ export default function ImprintPage() {
         <p className='text-center'>
           Telefon: +49 (0)89 31908366
           <br />
-          E-Mail: {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className='mb-1 inline-flex max-h-[20px]'
-            src='/png/contact-unit214.png'
-            alt='contact unit 214 email'
-          />
+          E-Mail: {contactEmail}
         </p>
       </div>
 

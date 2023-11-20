@@ -5,6 +5,8 @@ import { cn } from '@/lib/utils';
 import NextImage from '@/components/NextImage';
 import NextLink from '@/components/NextLink';
 
+import { contactEmail } from '@/constant/contact';
+
 function Logo() {
   return (
     <NextImage
@@ -78,7 +80,7 @@ export default function Header({
           </button>
         )}
         {clickOnContactBehaviour === 'sendMail' && (
-          <NextLink href='mailto:contact@unit214.de' className='no-underline'>
+          <NextLink href={`mailto:${contactEmail}`} className='no-underline'>
             <ContactButtonContent />
           </NextLink>
         )}
