@@ -26,5 +26,5 @@ export const TESTIMONIALS: Testimonial[] = [
 export const TESTIMONIAL_LOGOS: string[] = [
   '/svg/logo-spendit.svg',
   '/svg/logo-atem.svg',
-  '/png/logo-apeunit.png',
+  '/images/logo-apeunit.png',
 ];
