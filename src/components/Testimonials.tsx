@@ -16,8 +16,8 @@ function TestimonialSectionAmberBox() {
 function TestimonialText({ testimonial }: { testimonial: Testimonial }) {
   return (
     <div className='font-primary flex flex-col gap-4 text-left text-xs font-light lg:w-60'>
-      <span>"{testimonial.text}"</span>
-      <span className='font-medium'>— {testimonial.source}</span>
+      <span>"{testimonial?.text}"</span>
+      <span className='font-medium'>— {testimonial?.source}</span>
     </div>
   );
 }
@@ -56,7 +56,7 @@ export default function Testimonials() {
         }, 700); // fade duration
       };
 
-      const timer = setInterval(changeText, 10000 + 700); // Time to show text + fade-out duration
+      const timer = setInterval(changeText, 30000 + 700); // Time to show text + fade-out duration
 
       return () => clearInterval(timer);
     }
@@ -81,7 +81,7 @@ export default function Testimonials() {
             className='mx-10 flex transition-opacity duration-700 ease-in-out lg:hidden'
             style={{ opacity: opacity }}
           >
-            <TestimonialText testimonial={TESTIMONIALS[index]} />
+            <TestimonialText testimonial={randomTestimonials[index]} />
           </div>
           <div
             className='gradient-mask-r-90 scrollbar-none flex max-w-full gap-5 overflow-y-hidden lg:mx-40 '
