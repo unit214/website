@@ -1,15 +1,29 @@
+import Link from 'next/link';
 import { FiMail } from 'react-icons/fi';
 
 import { cn } from '@/lib/utils';
 
 import NextImage from '@/components/NextImage';
 
+function Logo() {
+  return (
+    <NextImage
+      src='/svg/unit214_bw.svg'
+      alt='unit214-logo'
+      width={120}
+      height={0}
+      useSkeleton
+    />
+  );
+}
 export default function Header({
   opacity,
   className,
+  clickOnLogoBehaviour,
 }: {
   opacity?: number;
   className?: string;
+  clickOnLogoBehaviour: 'scrollUp' | 'goHome';
 }) {
   function scrollUp() {
     window.scroll({
@@ -34,15 +48,16 @@ export default function Header({
           className
         )}
       >
-        <button onClick={scrollUp}>
-          <NextImage
-            src='/svg/unit214_bw.svg'
-            alt='unit214-logo'
-            width={120}
-            height={0}
-            useSkeleton
-          />
-        </button>
+        {clickOnLogoBehaviour === 'scrollUp' && (
+          <button onClick={scrollUp}>
+            <Logo />
+          </button>
+        )}
+        {clickOnLogoBehaviour === 'goHome' && (
+          <Link href='/'>
+            <Logo />
+          </Link>
+        )}
         <div className='grow'></div>
         <button
           className='flex h-9 w-fit items-center justify-center gap-1.5 rounded-full bg-white px-4'

@@ -1,8 +1,8 @@
 'use client';
 
 import AmberBox from '@/components/AmberBox';
-import CyanBoxAndHeader from '@/components/CyanBoxAndHeader';
 import Footer from '@/components/Footer';
+import HeaderAndMainClaim from '@/components/HeaderAndMainClaim';
 import LetsGetInTouch from '@/components/LetsGetInTouch';
 import OurMission from '@/components/OurMission';
 import Testimonials from '@/components/Testimonials';
@@ -22,7 +22,7 @@ export default function HomePage() {
     <main>
       <div className='relative'>
         <AmberBox />
-        <CyanBoxAndHeader />
+        <HeaderAndMainClaim />
         <div className='flex w-full flex-col items-center justify-center'>
           <WhatWeDo />
           <OurMission />

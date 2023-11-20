@@ -4,7 +4,7 @@ import NextImage from '@/components/NextImage';
 
 export default function Footer({ text, link }: { text: string; link: string }) {
   return (
-    <div className='relative flex w-full justify-center pb-4 lg:max-w-[1300px]'>
+    <div className='relative mt-20 flex w-full justify-center pb-4 lg:max-w-[1300px]'>
       <Link
         href={link}
         className='font-primary text-xs text-neutral-700 underline'
