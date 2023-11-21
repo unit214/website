@@ -23,6 +23,9 @@ const customJestConfig = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^~/(.*)$': '<rootDir>/public/$1',
     '^.+\\.(svg)$': '<rootDir>/src/__mocks__/svg.tsx',
+    '^swiper/react': '<rootDir>/node_modules/swiper/swiper-react.d.ts',
+    '^swiper/modules': '<rootDir>/node_modules/swiper/types/modules/index.d.ts',
+    '^swiper/css': '<rootDir>/node_modules/swiper/swiper.css',
   },
 };
 
