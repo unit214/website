@@ -1,7 +1,8 @@
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import NextImage from '@/components/NextImage';
 import NextLink from '@/components/NextLink';
@@ -67,18 +68,27 @@ export default function Testimonials() {
               pagination={{
                 clickable: true,
               }}
-              modules={[Autoplay, Pagination]}
+              modules={[Autoplay, Pagination, Navigation]}
               effect='slide'
               autoplay={{
                 delay: 5000,
                 disableOnInteraction: true,
               }}
-              navigation={true}
+              navigation={{ enabled: false }}
+              breakpoints={{
+                1024: {
+                  navigation: { enabled: true },
+                },
+              }}
               loop={true}
               style={{
                 '--swiper-pagination-color': '#FFFFFF',
                 '--swiper-pagination-bullet-inactive-color': '#FFFFFF',
                 '--swiper-pagination-bullet-horizontal-gap': '6px',
+                '--swiper-navigation-size': '30px',
+                '--swiper-navigation-top-offset': '350px',
+                '--swiper-navigation-sides-offset': '0',
+                '--swiper-navigation-color': '#FFFFFF',
               }}
             >
               {TESTIMONIALS.map((testimonial, index) => (
