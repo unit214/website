@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
-
-import { getRandomElements, isMobile } from '@/lib/utils';
+import { Autoplay, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import NextImage from '@/components/NextImage';
+import NextLink from '@/components/NextLink';
 
 import { Testimonial } from '@/constant/models';
-import { TESTIMONIAL_LOGOS, TESTIMONIALS } from '@/constant/testimonials';
+import { TESTIMONIALS } from '@/constant/testimonials';
 
 function TestimonialSectionAmberBox() {
   return (
@@ -13,83 +15,78 @@ function TestimonialSectionAmberBox() {
   );
 }
 
-function TestimonialText({ testimonial }: { testimonial: Testimonial }) {
+function TestimonialSlide({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className='font-primary flex flex-col gap-4 text-left text-xs font-light lg:w-60'>
-      <span>"{testimonial?.text}"</span>
-      <span className='font-medium'>— {testimonial?.source}</span>
-    </div>
-  );
-}
-
-function TestimonialLogo({ imageSrc }: { imageSrc: string }) {
-  return (
-    <div className='flex h-24 w-60 shrink-0 items-center justify-center bg-white p-10 text-black'>
-      <NextImage
-        src={imageSrc}
-        alt='logo'
-        width='240'
-        height='90'
-        useSkeleton
-      />
+    <div className='my-5 flex h-full min-h-[350px] w-full flex-col justify-around lg:flex-row lg:items-start lg:pt-14'>
+      <div className='font-primary flex w-full flex-col items-start gap-4 text-left text-sm font-light lg:w-1/2'>
+        <span>"{testimonial.text}"</span>
+        <span className='font-medium'>
+          — {testimonial.source}
+          {testimonial.website && (
+            <>
+              {' '}
+              <NextLink href={testimonial.website.url}>
+                {testimonial.website.text}
+              </NextLink>
+            </>
+          )}
+        </span>
+      </div>
+      <div className='mb-5 flex lg:w-1/2 lg:justify-center'>
+        {testimonial.logo && (
+          <div className='flex h-24 w-60 shrink-0 items-center justify-center bg-white p-10 text-black'>
+            <NextImage
+              src={testimonial.logo}
+              alt='logo'
+              width={240}
+              height={0}
+              useSkeleton
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
 
 export default function Testimonials() {
-  const [randomTestimonials, setRandomTestimonials] = useState<Testimonial[]>(
-    []
-  );
-  const [index, setIndex] = useState(0);
-  const [opacity, setOpacity] = useState<number>(1);
-
-  useEffect(() => {
-    const random: Testimonial[] = getRandomElements(TESTIMONIALS, 3);
-    setRandomTestimonials(random);
-
-    if (isMobile()) {
-      const changeText = () => {
-        setOpacity(0);
-        setTimeout(() => {
-          setIndex((prevIndex) => (prevIndex + 1) % TESTIMONIALS.length);
-          setOpacity(100);
-        }, 700); // fade duration
-      };
-
-      const timer = setInterval(changeText, 30000 + 700); // Time to show text + fade-out duration
-
-      return () => clearInterval(timer);
-    }
-  }, []);
-
   return (
     <div className='relative flex h-[700px] w-full items-center justify-center lg:max-w-[1300px]'>
       <TestimonialSectionAmberBox />
       <div className='bg-primary-red custom-angled-rectangle-red-testimonials-mobile lg:custom-angled-rectangle-red-testimonials h-[600px] w-full lg:h-[600px] lg:max-w-[1200px] '>
-        <div className='flex h-full flex-col justify-between gap-5 py-20 text-white'>
-          <h1 className='mx-10 lg:mx-40'>
+        <div className='mx-10 flex h-full flex-col py-20 text-white lg:mx-40'>
+          <h1>
             Why people love
             <br />
             to work with us.
           </h1>
-          <div className='hidden justify-between gap-5 lg:mx-40 lg:flex'>
-            {randomTestimonials.map((testimonial, index) => (
-              <TestimonialText key={index} testimonial={testimonial} />
-            ))}
-          </div>
-          <div
-            className='mx-10 flex transition-opacity duration-700 ease-in-out lg:hidden'
-            style={{ opacity: opacity }}
-          >
-            <TestimonialText testimonial={randomTestimonials[index]} />
-          </div>
-          <div
-            className='gradient-mask-r-90 scrollbar-none flex max-w-full gap-5 overflow-y-hidden lg:mx-40 '
-            style={{ overflow: '-moz-scrollbars-none' }}
-          >
-            {TESTIMONIAL_LOGOS.map((logo, index) => (
-              <TestimonialLogo key={index} imageSrc={logo} />
-            ))}
+          <div className='w-full'>
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={20}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Autoplay, Pagination]}
+              effect='slide'
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: true,
+              }}
+              navigation={true}
+              loop={true}
+              style={{
+                '--swiper-pagination-color': '#FFFFFF',
+                '--swiper-pagination-bullet-inactive-color': '#FFFFFF',
+                '--swiper-pagination-bullet-horizontal-gap': '6px',
+              }}
+            >
+              {TESTIMONIALS.map((testimonial, index) => (
+                <SwiperSlide key={index}>
+                  <TestimonialSlide testimonial={testimonial} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
