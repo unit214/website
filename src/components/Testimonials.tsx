@@ -4,6 +4,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import { cn } from '@/lib/utils';
+
 import NextImage from '@/components/NextImage';
 import NextLink from '@/components/NextLink';
 
@@ -26,7 +28,7 @@ function TestimonialSlide({ testimonial }: { testimonial: Testimonial }) {
           {testimonial.website && (
             <>
               {' '}
-              <NextLink href={testimonial.website.url}>
+              <NextLink href={testimonial.website.url} isExternalLink>
                 {testimonial.website.text}
               </NextLink>
             </>
@@ -35,7 +37,12 @@ function TestimonialSlide({ testimonial }: { testimonial: Testimonial }) {
       </div>
       <div className='mb-5 flex lg:w-1/2 lg:justify-center'>
         {testimonial.logo && (
-          <div className='flex h-24 w-60 shrink-0 items-center justify-center bg-white p-10 text-black'>
+          <div
+            className={cn(
+              'flex h-24 w-60 shrink-0 items-center justify-center bg-white p-10 text-black',
+              testimonial.website?.text === 'Unit A' && 'bg-black'
+            )}
+          >
             <NextImage
               src={testimonial.logo}
               alt='logo'

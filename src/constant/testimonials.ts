@@ -33,7 +33,7 @@ export const TESTIMONIALS: Testimonial[] = [
     text: "The senior full-stack engineers at Unit 214 were vital mentors to our newly formed team. Their support accelerated our team's growth, delivery timelines, and code quality with a lasting impact.",
     logo: '/images/logo-unita.png',
     website: {
-      text: ' Unit A',
+      text: 'Unit A',
       url: 'https://unita.apeunit.com',
     },
   },
