@@ -3,7 +3,7 @@ import { Testimonial } from '@/constant/models';
 export const TESTIMONIALS: Testimonial[] = [
   {
     source: 'Andreas Lehmann - Head of Engineering at',
-    text: 'Spendit and Unit 214 are collaborating with great success in different projects. Unit 214 delivered a scalable Scala microservice, provided an initial setup for our Kubernetes setup, as well as supported our internal development team with their expertise. Overall their efforts exceeded our expectations.',
+    text: 'Spendit and Unit 214 are collaborating with great success in different projects. Unit 214 delivered a scalable Scala microservice, provided an initial setup for our Kubernetes cluster, as well as supported our internal development team with their expertise. Overall their efforts exceeded our expectations.',
     logo: '/svg/logo-spendit.svg',
     website: {
       text: 'Spendit AG',
