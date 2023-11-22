@@ -10,7 +10,7 @@ import MainClaim from '@/components/MainClaim';
 
 export default function HeaderAndMainClaim() {
   const [headerOpacity, setHeaderOpacity] = useState(0);
-  const [scrollDownButtonOpacity, setScrollDownButtonOpacity] = useState(1);
+  const [scrollDownButtonOpacity, setScrollDownButtonOpacity] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
