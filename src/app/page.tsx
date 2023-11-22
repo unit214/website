@@ -27,7 +27,7 @@ export default function HomePage() {
           <WhoWeAre />
           <Testimonials />
           <LetsGetInTouch />
-          <Footer text='Imprint' link='/imprint' />
+          <Footer text='Imprint / Impressum' link='/imprint' />
         </div>
       </div>
     </main>
