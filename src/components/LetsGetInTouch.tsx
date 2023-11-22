@@ -6,7 +6,7 @@ import { contactEmail } from '@/constant/contact';
 
 export default function LetsGetInTouch() {
   return (
-    <div className='pb-8 pt-14 lg:pb-28 lg:pt-16'>
+    <div className='mb-8 mt-14 lg:mb-28 lg:mt-24'>
       <NextLink
         className='flex w-fit items-center justify-center gap-3 rounded-full bg-black px-6 py-3 text-white no-underline lg:px-8'
         href={`mailto:${contactEmail}`}
