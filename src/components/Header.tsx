@@ -21,7 +21,7 @@ function Logo() {
 
 function ContactButtonContent() {
   return (
-    <div className='flex h-9 w-fit items-center justify-center gap-1.5 rounded-full bg-white px-4'>
+    <div className='flex h-9 w-fit items-center justify-center gap-1.5 rounded-full bg-white px-4 transition-opacity duration-200 ease-in hover:opacity-80'>
       <span className='font-primary hidden text-sm font-semibold lg:flex'>
         Let's get in touch!
       </span>
