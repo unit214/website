@@ -40,7 +40,7 @@ function ExternalReferences({
   );
 }
 
-function EmployeeField({
+function TeamMemberField({
   imgSource,
   name,
   description,
@@ -73,7 +73,7 @@ function EmployeeField({
             className='hidden lg:flex'
           />
         </div>
-        <span className='font-primary text-xs font-light'>{description}</span>
+        <span className='font-primary text-sm font-light'>{description}</span>
       </div>
       <ExternalReferences
         linkedInLink={linkedInLink}
@@ -91,7 +91,7 @@ export default function WhoWeAre() {
       <div className='flex w-[430px] flex-col gap-10 lg:w-fit lg:flex-row lg:items-start lg:gap-20'>
         <h1 className='whitespace-nowrap'>Who We Are</h1>
         <div className='flex flex-col gap-10'>
-          <EmployeeField
+          <TeamMemberField
             imgSource='/svg/who-we-are-tom.svg'
             name='Tom Graupner'
             description={
@@ -104,7 +104,7 @@ export default function WhoWeAre() {
             linkedInLink='https://www.linkedin.com/in/tom-graupner/'
             gitHubLink='https://github.com/tgraupne'
           />
-          <EmployeeField
+          <TeamMemberField
             imgSource='/svg/who-we-are-keno.svg'
             name='Keno Dreßel'
             description={
@@ -117,7 +117,7 @@ export default function WhoWeAre() {
             linkedInLink='https://www.linkedin.com/in/kenodressel/'
             gitHubLink='https://github.com/kenodressel'
           />
-          <EmployeeField
+          <TeamMemberField
             imgSource='/svg/who-we-are-philipp.svg'
             name='Philipp Piwowarsky'
             description={
@@ -130,7 +130,7 @@ export default function WhoWeAre() {
             linkedInLink='https://www.linkedin.com/in/philipp-piwowarsky/'
             gitHubLink='https://github.com/thepiwo'
           />
-          <EmployeeField
+          <TeamMemberField
             imgSource='/svg/who-we-are-timo.svg'
             name='Timo Erdelt'
             description={
