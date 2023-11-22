@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -58,11 +60,14 @@ function TestimonialSlide({ testimonial }: { testimonial: Testimonial }) {
 }
 
 export default function Testimonials() {
+  const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
+  const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
+
   return (
     <div className='relative flex h-[700px] w-full items-center justify-center lg:max-w-[1300px]'>
       <TestimonialSectionAmberBox />
       <div className='bg-primary-red custom-angled-rectangle-red-testimonials-mobile lg:custom-angled-rectangle-red-testimonials h-[600px] w-full lg:h-[600px] lg:max-w-[1200px] '>
-        <div className='mx-10 flex h-full flex-col py-20 text-white lg:mx-40'>
+        <div className='relative mx-10 flex h-full flex-col py-20 text-white lg:mx-40'>
           <h1>
             Why people love
             <br />
@@ -81,21 +86,16 @@ export default function Testimonials() {
                 delay: 5000,
                 disableOnInteraction: true,
               }}
-              navigation={{ enabled: false }}
-              breakpoints={{
-                1024: {
-                  navigation: { enabled: true },
-                },
+              navigation={{
+                enabled: true,
+                prevEl: prevEl,
+                nextEl: nextEl,
               }}
               loop={true}
               style={{
                 '--swiper-pagination-color': '#FFFFFF',
                 '--swiper-pagination-bullet-inactive-color': '#FFFFFF',
                 '--swiper-pagination-bullet-horizontal-gap': '6px',
-                '--swiper-navigation-size': '30px',
-                '--swiper-navigation-top-offset': '350px',
-                '--swiper-navigation-sides-offset': '0',
-                '--swiper-navigation-color': '#FFFFFF',
               }}
             >
               {TESTIMONIALS.map((testimonial, index) => (
@@ -104,6 +104,18 @@ export default function Testimonials() {
                 </SwiperSlide>
               ))}
             </Swiper>
+            <button
+              className='absolute bottom-16 left-0 z-10 hidden lg:inline-flex'
+              ref={(node) => setPrevEl(node)}
+            >
+              <IoIosArrowBack size={30} />
+            </button>
+            <button
+              className='absolute bottom-16 right-0 z-10 hidden lg:inline-flex'
+              ref={(node) => setNextEl(node)}
+            >
+              <IoIosArrowForward size={30} />
+            </button>
           </div>
         </div>
       </div>
