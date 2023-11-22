@@ -3,6 +3,8 @@ import { ReactNode } from 'react';
 
 import '@/styles/globals.css';
 
+import { GoatCounter } from '@/components/GoatCounter';
+
 import { siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
@@ -39,6 +41,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html>
+      <GoatCounter />
       <body>{children}</body>
     </html>
   );
