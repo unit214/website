@@ -1,6 +1,6 @@
-import NextLink from '@/components/NextLink';
+import NextLink from '@/components/NextLink'
 
-import GreyDots from '~/svg/grey-dots.svg';
+import GreyDots from '~/svg/grey-dots.svg'
 
 export default function Footer({ text, link }: { text: string; link: string }) {
   return (
@@ -11,5 +11,5 @@ export default function Footer({ text, link }: { text: string; link: string }) {
       <GreyDots className='absolute bottom-4 right-20 hidden w-[130px] lg:inline-flex' />
       <GreyDots className='absolute bottom-4 right-4 w-[70px] lg:hidden' />
     </div>
-  );
+  )
 }

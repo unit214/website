@@ -1,15 +1,15 @@
-import { ReactElement } from 'react';
+import { ReactElement } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import NextLink from '@/components/NextLink';
+import NextLink from '@/components/NextLink'
 
-import GitHubLogo from '~/svg/github.svg';
-import LinkedInLogo from '~/svg/linkedin.svg';
-import KenoLogo from '~/svg/who-we-are-keno.svg';
-import PhilippLogo from '~/svg/who-we-are-philipp.svg';
-import TimoLogo from '~/svg/who-we-are-timo.svg';
-import TomLogo from '~/svg/who-we-are-tom.svg';
+import GitHubLogo from '~/svg/github.svg'
+import LinkedInLogo from '~/svg/linkedin.svg'
+import KenoLogo from '~/svg/who-we-are-keno.svg'
+import PhilippLogo from '~/svg/who-we-are-philipp.svg'
+import TimoLogo from '~/svg/who-we-are-timo.svg'
+import TomLogo from '~/svg/who-we-are-tom.svg'
 
 function ExternalReferences({
   linkedInLink,
@@ -17,10 +17,10 @@ function ExternalReferences({
   className,
   classNameLogo,
 }: {
-  linkedInLink: string;
-  gitHubLink: string;
-  className: string;
-  classNameLogo: string;
+  linkedInLink: string
+  gitHubLink: string
+  className: string
+  classNameLogo: string
 }) {
   return (
     <div className={cn('gap-1', className)}>
@@ -31,7 +31,7 @@ function ExternalReferences({
         <GitHubLogo className={cn(classNameLogo)} />
       </NextLink>
     </div>
-  );
+  )
 }
 
 function TeamMemberField({
@@ -41,11 +41,11 @@ function TeamMemberField({
   linkedInLink,
   gitHubLink,
 }: {
-  logo: ReactElement;
-  name: string;
-  description: ReactElement;
-  linkedInLink: string;
-  gitHubLink: string;
+  logo: ReactElement
+  name: string
+  description: ReactElement
+  linkedInLink: string
+  gitHubLink: string
 }) {
   return (
     <div className='flex items-start justify-between gap-5 lg:items-center lg:justify-start lg:gap-16'>
@@ -69,7 +69,7 @@ function TeamMemberField({
         classNameLogo='w-6 h-4'
       />
     </div>
-  );
+  )
 }
 
 export default function WhoWeAre() {
@@ -133,5 +133,5 @@ export default function WhoWeAre() {
         </div>
       </div>
     </div>
-  );
+  )
 }

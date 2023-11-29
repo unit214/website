@@ -1,12 +1,12 @@
-'use client';
-import { Metadata } from 'next';
+'use client'
+import { Metadata } from 'next'
 
-import NextLink from '@/components/NextLink';
+import NextLink from '@/components/NextLink'
 
-import Unit214Logo from '~/svg/unit214.svg';
+import Unit214Logo from '~/svg/unit214.svg'
 export const metadata: Metadata = {
   title: 'Not Found',
-};
+}
 
 export default function NotFound() {
   return (
@@ -19,5 +19,5 @@ export default function NotFound() {
         </div>
       </section>
     </main>
-  );
+  )
 }

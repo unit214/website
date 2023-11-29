@@ -1,8 +1,8 @@
-import { FiMail } from 'react-icons/fi';
+import { FiMail } from 'react-icons/fi'
 
-import NextLink from '@/components/NextLink';
+import NextLink from '@/components/NextLink'
 
-import { contactEmail } from '@/constant/contact';
+import { contactEmail } from '@/constant/contact'
 
 export default function LetsGetInTouch() {
   return (
@@ -17,5 +17,5 @@ export default function LetsGetInTouch() {
         <FiMail size={32} />
       </NextLink>
     </div>
-  );
+  )
 }

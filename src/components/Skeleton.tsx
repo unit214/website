@@ -1,8 +1,8 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-type SkeletonProps = ComponentPropsWithoutRef<'div'>;
+type SkeletonProps = ComponentPropsWithoutRef<'div'>
 
 export default function Skeleton({ className, ...rest }: SkeletonProps) {
   return (
@@ -16,5 +16,5 @@ export default function Skeleton({ className, ...rest }: SkeletonProps) {
       }}
       {...rest}
     />
-  );
+  )
 }

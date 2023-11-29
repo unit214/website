@@ -1,6 +1,6 @@
-import TextEllipsis from '~/svg/text-ellipsis.svg';
-import TextUnderline from '~/svg/text-underline.svg';
-import TextUnderlineShort from '~/svg/text-underline-short.svg';
+import TextEllipsis from '~/svg/text-ellipsis.svg'
+import TextUnderline from '~/svg/text-underline.svg'
+import TextUnderlineShort from '~/svg/text-underline-short.svg'
 
 function TailoredTechSolutions() {
   return (
@@ -26,7 +26,7 @@ function TailoredTechSolutions() {
         <TextUnderlineShort className='absolute -bottom-1.5 left-0 w-[185px]' />
       </span>
     </h1>
-  );
+  )
 }
 
 function Mission() {
@@ -42,7 +42,7 @@ function Mission() {
         <span className='font-semibold'>excel</span>.
       </div>
     </div>
-  );
+  )
 }
 export default function OurMission() {
   return (
@@ -52,5 +52,5 @@ export default function OurMission() {
         <Mission />
       </div>
     </div>
-  );
+  )
 }

@@ -82,4 +82,4 @@ module.exports = {
     JSX: true,
   },
   ignorePatterns: ['!/.prettierrc.js'],
-};
+}

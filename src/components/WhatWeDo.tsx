@@ -16,5 +16,5 @@ export default function WhatWeDo() {
         </div>
       </div>
     </div>
-  );
+  )
 }

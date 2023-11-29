@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import Footer from '@/components/Footer';
-import HeaderAndMainClaim from '@/components/HeaderAndMainClaim';
-import LetsGetInTouch from '@/components/LetsGetInTouch';
-import OurMission from '@/components/OurMission';
-import Testimonials from '@/components/Testimonials';
-import WhatWeDo from '@/components/WhatWeDo';
-import WhoWeAre from '@/components/WhoWeAre';
+import Footer from '@/components/Footer'
+import HeaderAndMainClaim from '@/components/HeaderAndMainClaim'
+import LetsGetInTouch from '@/components/LetsGetInTouch'
+import OurMission from '@/components/OurMission'
+import Testimonials from '@/components/Testimonials'
+import WhatWeDo from '@/components/WhatWeDo'
+import WhoWeAre from '@/components/WhoWeAre'
 
 export default function HomePage() {
   return (
@@ -23,5 +23,5 @@ export default function HomePage() {
         </div>
       </div>
     </main>
-  );
+  )
 }
