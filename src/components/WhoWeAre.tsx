@@ -1,4 +1,4 @@
-import { ReactElement } from 'react'
+import { FC, ReactElement, SVGProps } from 'react'
 
 import { cn } from '@/lib/utils'
 
@@ -35,13 +35,13 @@ function ExternalReferences({
 }
 
 function TeamMemberField({
-  logo,
+  Logo,
   name,
   description,
   linkedInLink,
   gitHubLink,
 }: {
-  logo: ReactElement
+  Logo: FC<SVGProps<SVGSVGElement>>
   name: string
   description: ReactElement
   linkedInLink: string
@@ -49,7 +49,7 @@ function TeamMemberField({
 }) {
   return (
     <div className='flex items-start justify-between gap-5 lg:items-center lg:justify-start lg:gap-16'>
-      {logo}
+      <Logo className='hidden w-[85px] lg:inline-flex' />
       <div className='flex flex-col gap-2.5'>
         <div className='flex items-center gap-2'>
           <div className='font-primary text-xl font-semibold'>{name}</div>
@@ -79,7 +79,7 @@ export default function WhoWeAre() {
         <h1 className='whitespace-nowrap'>Who We Are</h1>
         <div className='flex flex-col gap-10'>
           <TeamMemberField
-            logo={<TomLogo className='hidden w-[85px] lg:inline-flex' />}
+            Logo={TomLogo}
             name='Tom Graupner'
             description={
               <>
@@ -92,7 +92,7 @@ export default function WhoWeAre() {
             gitHubLink='https://github.com/tgraupne'
           />
           <TeamMemberField
-            logo={<KenoLogo className='hidden w-[85px] lg:inline-flex' />}
+            Logo={KenoLogo}
             name='Keno Dreßel'
             description={
               <>
@@ -105,7 +105,7 @@ export default function WhoWeAre() {
             gitHubLink='https://github.com/kenodressel'
           />
           <TeamMemberField
-            logo={<PhilippLogo className='hidden w-[85px] lg:inline-flex' />}
+            Logo={PhilippLogo}
             name='Philipp Piwowarsky'
             description={
               <>
@@ -118,7 +118,7 @@ export default function WhoWeAre() {
             gitHubLink='https://github.com/thepiwo'
           />
           <TeamMemberField
-            logo={<TimoLogo className='hidden w-[85px] lg:inline-flex' />}
+            Logo={TimoLogo}
             name='Timo Erdelt'
             description={
               <>
