@@ -8,13 +8,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
-  // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
-
+  // Needed for exported applications
   images: {
     unoptimized: true,
   },
