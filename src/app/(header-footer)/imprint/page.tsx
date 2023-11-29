@@ -1,5 +1,3 @@
-'use client'
-
 import NextLink from '@/components/NextLink'
 
 import { contactEmail } from '@/constant/contact'

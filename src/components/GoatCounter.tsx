@@ -1,4 +1,5 @@
 'use client'
+
 import { usePathname } from 'next/navigation'
 import Script from 'next/script'
 import { useEffect, useState } from 'react'
