@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import PlausibleProvider from 'next-plausible';
 import { ReactNode } from 'react';
 
 import '@/styles/globals.css';
@@ -41,7 +42,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html>
-      <GoatCounter />
+      <head>
+        <PlausibleProvider
+          domain='unit214.dev'
+          // trackLocalhost={true}
+          enabled={true}
+        />
+        <GoatCounter />
+      </head>
       <body>{children}</body>
     </html>
   );
