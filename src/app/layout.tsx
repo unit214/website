@@ -1,12 +1,12 @@
-import { Metadata } from 'next';
-import PlausibleProvider from 'next-plausible';
-import { ReactNode } from 'react';
+import { Metadata } from 'next'
+import PlausibleProvider from 'next-plausible'
+import { ReactNode } from 'react'
 
-import '@/styles/globals.css';
+import '@/styles/globals.css'
 
-import { GoatCounter } from '@/components/GoatCounter';
+import { GoatCounter } from '@/components/GoatCounter'
 
-import { siteConfig } from '@/constant/config';
+import { siteConfig } from '@/constant/config'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://unit214.dev'),
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/og.jpg`],
   },
-};
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -52,5 +52,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>{children}</body>
     </html>
-  );
+  )
 }

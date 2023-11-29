@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import NextLink from '@/components/NextLink';
+import NextLink from '@/components/NextLink'
 
-import { contactEmail } from '@/constant/contact';
+import { contactEmail } from '@/constant/contact'
 
 export default function ImprintPage() {
   return (
@@ -86,5 +86,5 @@ export default function ImprintPage() {
         </p>
       </div>
     </div>
-  );
+  )
 }

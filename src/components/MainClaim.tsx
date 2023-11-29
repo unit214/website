@@ -9,5 +9,5 @@ export default function MainClaim() {
       <br className='inline-flex sm:hidden' />
       IT CONSULTING
     </div>
-  );
+  )
 }

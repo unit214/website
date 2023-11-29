@@ -1,14 +1,14 @@
-'use client';
-import { ReactNode } from 'react';
+'use client'
+import { ReactNode } from 'react'
 
-import CyanAmberHeaderBox from '@/components/CyanAmberHeaderBox';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import CyanAmberHeaderBox from '@/components/CyanAmberHeaderBox'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 
 export default function HeaderFooterLayout({
   children,
 }: {
-  children: ReactNode;
+  children: ReactNode
 }) {
   return (
     <div className='relative'>
@@ -24,5 +24,5 @@ export default function HeaderFooterLayout({
         <Footer text='Home' link='/' />
       </div>
     </div>
-  );
+  )
 }

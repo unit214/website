@@ -1,12 +1,12 @@
-import { FiMail } from 'react-icons/fi';
+import { FiMail } from 'react-icons/fi'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import NextLink from '@/components/NextLink';
+import NextLink from '@/components/NextLink'
 
-import { contactEmail } from '@/constant/contact';
+import { contactEmail } from '@/constant/contact'
 
-import Unit214LogoBW from '~/svg/unit214_bw.svg';
+import Unit214LogoBW from '~/svg/unit214_bw.svg'
 
 function ContactButtonContent() {
   return (
@@ -16,7 +16,7 @@ function ContactButtonContent() {
       </span>
       <FiMail />
     </div>
-  );
+  )
 }
 
 export default function Header({
@@ -25,23 +25,23 @@ export default function Header({
   clickOnLogoBehaviour,
   clickOnContactBehaviour,
 }: {
-  opacity?: number;
-  className?: string;
-  clickOnLogoBehaviour: 'scrollUp' | 'goHome';
-  clickOnContactBehaviour: 'scrollDown' | 'sendMail';
+  opacity?: number
+  className?: string
+  clickOnLogoBehaviour: 'scrollUp' | 'goHome'
+  clickOnContactBehaviour: 'scrollDown' | 'sendMail'
 }) {
   function scrollUp() {
     window.scroll({
       top: 0,
       behavior: 'smooth',
-    });
+    })
   }
 
   function scrollDown() {
     window.scroll({
       top: document.body.scrollHeight,
       behavior: 'smooth',
-    });
+    })
   }
 
   return (
@@ -75,5 +75,5 @@ export default function Header({
         )}
       </div>
     </div>
-  );
+  )
 }

@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { useState } from 'react'
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import NextImage from '@/components/NextImage';
-import NextLink from '@/components/NextLink';
+import NextImage from '@/components/NextImage'
+import NextLink from '@/components/NextLink'
 
-import { Testimonial } from '@/constant/models';
-import { TESTIMONIALS } from '@/constant/testimonials';
+import { Testimonial } from '@/constant/models'
+import { TESTIMONIALS } from '@/constant/testimonials'
 
 function TestimonialSectionAmberBox() {
   return (
     <div className='bg-primary-amber custom-angled-rectangle-amber-testimonials-animated-mobile lg:custom-angled-rectangle-amber-animated-testimonials absolute left-0 h-[700px] w-[80%] lg:w-[500px]' />
-  );
+  )
 }
 
 function TestimonialSlide({ testimonial }: { testimonial: Testimonial }) {
@@ -56,12 +56,12 @@ function TestimonialSlide({ testimonial }: { testimonial: Testimonial }) {
         )}
       </div>
     </div>
-  );
+  )
 }
 
 export default function Testimonials() {
-  const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
-  const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
+  const [prevEl, setPrevEl] = useState<HTMLElement | null>(null)
+  const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
 
   return (
     <div className='relative flex h-[700px] w-full items-center justify-center lg:max-w-[1300px]'>
@@ -120,5 +120,5 @@ export default function Testimonials() {
         </div>
       </div>
     </div>
-  );
+  )
 }

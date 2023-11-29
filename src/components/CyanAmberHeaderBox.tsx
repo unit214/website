@@ -1,13 +1,13 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
 export default function CyanAmberHeaderBox({
   children,
   className,
 }: {
-  children: ReactNode;
-  className: string;
+  children: ReactNode
+  className: string
 }) {
   return (
     <div className={cn('-top-[540px] z-10 lg:-top-[690px]', className)}>
@@ -18,5 +18,5 @@ export default function CyanAmberHeaderBox({
         </div>
       </div>
     </div>
-  );
+  )
 }

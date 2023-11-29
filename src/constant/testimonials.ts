@@ -1,4 +1,4 @@
-import { Testimonial } from '@/constant/models';
+import { Testimonial } from '@/constant/models'
 
 export const TESTIMONIALS: Testimonial[] = [
   {
@@ -41,4 +41,4 @@ export const TESTIMONIALS: Testimonial[] = [
     source: 'Yanislav Malahov',
     text: 'The team at Unit 214 has a long and successful history of working with us, they have been a reliable partner in many different engineering challenges. Unit 214 has been a key resource for technical analysis, system architecture, project planning and full-stack blockchain development.',
   },
-];
+]
