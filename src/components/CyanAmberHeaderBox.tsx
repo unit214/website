@@ -23,7 +23,7 @@ export default function CyanAmberHeaderBox({
     let angle1 = 0,
       angle2 = 0
 
-    // Idea: Let bottom corners rotate in circles with different radios and different cycling time
+    // Idea: Let bottom corners rotate in circles with different radius and different cycling time
     function updateClipPath() {
       const radius1 = 15 // radius of the circle of bottom right
       const radius2 = 10 // radius of the circle of bottom left
