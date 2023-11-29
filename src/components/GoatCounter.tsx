@@ -6,15 +6,20 @@ import { useEffect, useState } from 'react';
 export function GoatCounter() {
   const pathname = usePathname();
   const [goatcounter, setGoatcounter] = useState<GoatCounter | null>(null);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   useEffect(() => {
     if (!goatcounter) {
       return;
     }
 
-    goatcounter.count({
-      path: pathname,
-    });
+    if (!isInitialLoad) {
+      goatcounter.count({
+        path: pathname,
+      });
+    }
+    setIsInitialLoad(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname, goatcounter]);
 
   return (
