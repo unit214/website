@@ -1,9 +1,9 @@
 'use client';
 import { Metadata } from 'next';
 
-import NextImage from '@/components/NextImage';
 import NextLink from '@/components/NextLink';
 
+import Unit214Logo from '~/svg/unit214.svg';
 export const metadata: Metadata = {
   title: 'Not Found',
 };
@@ -13,13 +13,7 @@ export default function NotFound() {
     <main>
       <section className='bg-white'>
         <div className='layout flex min-h-screen flex-col items-center justify-center text-center text-black'>
-          <NextImage
-            src='/svg/unit214.svg'
-            alt='unit214-logo'
-            width={120}
-            height={0}
-            useSkeleton
-          />
+          <Unit214Logo className='w-[120px]' />
           <h1 className='mb-8 mt-8 text-4xl lg:text-6xl'>Page Not Found</h1>
           <NextLink href='/'>Back to home</NextLink>
         </div>
