@@ -1,5 +1,6 @@
-import NextImage from '@/components/NextImage';
 import NextLink from '@/components/NextLink';
+
+import GreyDots from '~/svg/grey-dots.svg';
 
 export default function Footer({ text, link }: { text: string; link: string }) {
   return (
@@ -7,20 +8,8 @@ export default function Footer({ text, link }: { text: string; link: string }) {
       <NextLink href={link} className='font-primary text-xs text-neutral-700'>
         {text}
       </NextLink>
-      <NextImage
-        alt='dots'
-        src='/svg/grey-dots.svg'
-        width={130}
-        height={0}
-        className='absolute bottom-4 right-20 hidden lg:inline-flex'
-      />
-      <NextImage
-        alt='dots'
-        src='/svg/grey-dots.svg'
-        width={70}
-        height={0}
-        className='absolute bottom-4 right-4 lg:hidden'
-      />
+      <GreyDots className='absolute bottom-4 right-20 hidden w-[130px] lg:inline-flex' />
+      <GreyDots className='absolute bottom-4 right-4 w-[70px] lg:hidden' />
     </div>
   );
 }

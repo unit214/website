@@ -2,52 +2,46 @@ import { ReactElement } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import NextImage from '@/components/NextImage';
 import NextLink from '@/components/NextLink';
+
+import GitHubLogo from '~/svg/github.svg';
+import LinkedInLogo from '~/svg/linkedin.svg';
+import KenoLogo from '~/svg/who-we-are-keno.svg';
+import PhilippLogo from '~/svg/who-we-are-philipp.svg';
+import TimoLogo from '~/svg/who-we-are-timo.svg';
+import TomLogo from '~/svg/who-we-are-tom.svg';
 
 function ExternalReferences({
   linkedInLink,
   gitHubLink,
-  size,
   className,
+  classNameLogo,
 }: {
   linkedInLink: string;
   gitHubLink: string;
-  size: number;
-  className?: string;
+  className: string;
+  classNameLogo: string;
 }) {
   return (
     <div className={cn('gap-1', className)}>
       <NextLink href={linkedInLink} isExternalLink>
-        <NextImage
-          src='/svg/linkedin.svg'
-          alt='linkedin-logo'
-          width={size}
-          height={size}
-          useSkeleton
-        />
+        <LinkedInLogo className={cn(classNameLogo)} />
       </NextLink>
       <NextLink href={gitHubLink} isExternalLink>
-        <NextImage
-          src='/svg/github.svg'
-          alt='github-logo'
-          width={size}
-          height={size}
-          useSkeleton
-        />
+        <GitHubLogo className={cn(classNameLogo)} />
       </NextLink>
     </div>
   );
 }
 
 function TeamMemberField({
-  imgSource,
+  logo,
   name,
   description,
   linkedInLink,
   gitHubLink,
 }: {
-  imgSource: string;
+  logo: ReactElement;
   name: string;
   description: ReactElement;
   linkedInLink: string;
@@ -55,22 +49,15 @@ function TeamMemberField({
 }) {
   return (
     <div className='flex items-start justify-between gap-5 lg:items-center lg:justify-start lg:gap-16'>
-      <NextImage
-        src={imgSource}
-        alt='logo'
-        width={85}
-        height={0}
-        className='hidden lg:inline-flex'
-        useSkeleton
-      />
+      {logo}
       <div className='flex flex-col gap-2.5'>
         <div className='flex items-center gap-2'>
           <div className='font-primary text-xl font-semibold'>{name}</div>
           <ExternalReferences
             linkedInLink={linkedInLink}
             gitHubLink={gitHubLink}
-            size={16}
             className='hidden lg:flex'
+            classNameLogo='w-4 h-4'
           />
         </div>
         <span className='font-primary text-sm font-light'>{description}</span>
@@ -78,8 +65,8 @@ function TeamMemberField({
       <ExternalReferences
         linkedInLink={linkedInLink}
         gitHubLink={gitHubLink}
-        size={25}
         className='flex lg:hidden'
+        classNameLogo='w-6 h-4'
       />
     </div>
   );
@@ -92,7 +79,7 @@ export default function WhoWeAre() {
         <h1 className='whitespace-nowrap'>Who We Are</h1>
         <div className='flex flex-col gap-10'>
           <TeamMemberField
-            imgSource='/svg/who-we-are-tom.svg'
+            logo={<TomLogo className='hidden w-[85px] lg:inline-flex' />}
             name='Tom Graupner'
             description={
               <>
@@ -105,7 +92,7 @@ export default function WhoWeAre() {
             gitHubLink='https://github.com/tgraupne'
           />
           <TeamMemberField
-            imgSource='/svg/who-we-are-keno.svg'
+            logo={<KenoLogo className='hidden w-[85px] lg:inline-flex' />}
             name='Keno Dreßel'
             description={
               <>
@@ -118,7 +105,7 @@ export default function WhoWeAre() {
             gitHubLink='https://github.com/kenodressel'
           />
           <TeamMemberField
-            imgSource='/svg/who-we-are-philipp.svg'
+            logo={<PhilippLogo className='hidden w-[85px] lg:inline-flex' />}
             name='Philipp Piwowarsky'
             description={
               <>
@@ -131,7 +118,7 @@ export default function WhoWeAre() {
             gitHubLink='https://github.com/thepiwo'
           />
           <TeamMemberField
-            imgSource='/svg/who-we-are-timo.svg'
+            logo={<TimoLogo className='hidden w-[85px] lg:inline-flex' />}
             name='Timo Erdelt'
             description={
               <>

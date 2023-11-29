@@ -2,22 +2,11 @@ import { FiMail } from 'react-icons/fi';
 
 import { cn } from '@/lib/utils';
 
-import NextImage from '@/components/NextImage';
 import NextLink from '@/components/NextLink';
 
 import { contactEmail } from '@/constant/contact';
 
-function Logo() {
-  return (
-    <NextImage
-      src='/svg/unit214_bw.svg'
-      alt='unit214-logo'
-      width={120}
-      height={0}
-      useSkeleton
-    />
-  );
-}
+import Unit214LogoBW from '~/svg/unit214_bw.svg';
 
 function ContactButtonContent() {
   return (
@@ -66,12 +55,12 @@ export default function Header({
       >
         {clickOnLogoBehaviour === 'scrollUp' && (
           <button onClick={scrollUp}>
-            <Logo />
+            <Unit214LogoBW className='w-[120px]' />
           </button>
         )}
         {clickOnLogoBehaviour === 'goHome' && (
           <NextLink href='/'>
-            <Logo />
+            <Unit214LogoBW className='w-[120px]' />
           </NextLink>
         )}
         {clickOnContactBehaviour === 'scrollDown' && (

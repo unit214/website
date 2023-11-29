@@ -1,55 +1,29 @@
-import NextImage from '@/components/NextImage';
+import TextEllipsis from '~/svg/text-ellipsis.svg';
+import TextUnderline from '~/svg/text-underline.svg';
+import TextUnderlineShort from '~/svg/text-underline-short.svg';
 
 function TailoredTechSolutions() {
   return (
     <h1 className='mt-10 lg:mt-0'>
       <span className='relative'>
         Tailored{' '}
-        <NextImage
-          src='/svg/text-ellipsis.svg'
-          alt='text-ellipsis'
-          width={135}
-          height={0}
-          className='absolute -left-3.5 -top-2.5'
-          useSkeleton
-        />
+        <TextEllipsis className='absolute -left-3.5 -top-2.5 w-[135px]' />
       </span>
       tech solutions
       <br />
       fostering{' '}
       <span className='relative hidden lg:inline-flex'>
         growth and collaboration.
-        <NextImage
-          src='/svg/text-underline.svg'
-          alt='text-underline'
-          width={350}
-          height={0}
-          className='absolute -bottom-1.5 left-0'
-          useSkeleton
-        />
+        <TextUnderline className='absolute -bottom-1.5 left-0 w-[350px]' />
       </span>
       <span className='relative lg:hidden'>
         growth and
-        <NextImage
-          src='/svg/text-underline-short.svg'
-          alt='text-underline-short'
-          width={155}
-          height={0}
-          className='absolute -bottom-1.5 left-0'
-          useSkeleton
-        />
+        <TextUnderlineShort className='absolute -bottom-1.5 left-0 w-[155px]' />
       </span>
       <br className='lg:hidden' />
       <span className='relative lg:hidden'>
         collaboration.
-        <NextImage
-          src='/svg/text-underline-short.svg'
-          alt='text-underline-short'
-          width={185}
-          height={0}
-          className='absolute -bottom-1.5 left-0'
-          useSkeleton
-        />
+        <TextUnderlineShort className='absolute -bottom-1.5 left-0 w-[185px]' />
       </span>
     </h1>
   );
