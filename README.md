@@ -7,13 +7,13 @@
 - TypeScript
 - Tailwind CSS 3 + [clsx](https://github.com/lukeed/clsx) + [tailwind-merge](https://github.com/dcastil/tailwind-merge)
 - Jest — Unit testing
-- Absolute Import and Path Alias — Import components using `@/` prefix
+- Absolute Import and Path Alias — Import components using `@/` and `~/` prefix
 - ESLint — Find and fix problems in the code, also will **auto sort** imports
 - Prettier — Consistent formatting
 - Husky & Lint Staged - Run scripts on staged files before they are committed
 - Conventional Commit Lint
 - Github Actions — Check code on GitHub
-- Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
+- Issue Autolink — Links issue on PR creation
 - Site Map — Automatically generate sitemap.xml
 - VS Code Snippets
 
