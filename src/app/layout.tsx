@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html>
       <head>
         <PlausibleProvider
-          domain='unit214.dev'
+          domain='unit214.de'
           // trackLocalhost={true}
           enabled={true}
         />
