@@ -9,7 +9,7 @@ import { GoatCounter } from '@/components/GoatCounter'
 import { siteConfig } from '@/constant/config'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://unit214.dev'),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.title}`,
