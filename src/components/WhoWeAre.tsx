@@ -1,11 +1,11 @@
 import { FC, ReactElement, SVGProps } from 'react'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+import { SiGooglecalendar } from 'react-icons/si'
 
 import { cn } from '@/lib/utils'
 
 import NextLink from '@/components/NextLink'
 
-import GitHubLogo from '~/svg/github.svg'
-import LinkedInLogo from '~/svg/linkedin.svg'
 import KenoLogo from '~/svg/who-we-are-keno.svg'
 import PhilippLogo from '~/svg/who-we-are-philipp.svg'
 import TimoLogo from '~/svg/who-we-are-timo.svg'
@@ -25,10 +25,10 @@ function ExternalReferences({
   return (
     <div className={cn('gap-1', className)}>
       <NextLink href={linkedInLink} isExternalLink>
-        <LinkedInLogo className={cn(classNameLogo)} />
+        <IoLogoLinkedin className={classNameLogo} />
       </NextLink>
       <NextLink href={gitHubLink} isExternalLink>
-        <GitHubLogo className={cn(classNameLogo)} />
+        <IoLogoGithub className={classNameLogo} />
       </NextLink>
     </div>
   )
@@ -40,12 +40,14 @@ function TeamMemberField({
   description,
   linkedInLink,
   gitHubLink,
+  calendarLink,
 }: {
   Logo: FC<SVGProps<SVGSVGElement>>
   name: string
   description: ReactElement
   linkedInLink: string
   gitHubLink: string
+  calendarLink?: string
 }) {
   return (
     <div className='flex items-start justify-between gap-5 lg:items-center lg:justify-start lg:gap-16'>
@@ -61,12 +63,21 @@ function TeamMemberField({
           />
         </div>
         <span className='font-primary text-sm font-light'>{description}</span>
+        {calendarLink && (
+          <NextLink
+            className='font-primary text-sm font-light flex gap-1 items-center'
+            href={calendarLink}
+            isExternalLink
+          >
+            Schedule a meeting with me! <SiGooglecalendar />
+          </NextLink>
+        )}
       </div>
       <ExternalReferences
         linkedInLink={linkedInLink}
         gitHubLink={gitHubLink}
         className='flex lg:hidden'
-        classNameLogo='w-6 h-4'
+        classNameLogo='w-6 h-6'
       />
     </div>
   )
@@ -90,6 +101,7 @@ export default function WhoWeAre() {
             }
             linkedInLink='https://www.linkedin.com/in/tom-graupner/'
             gitHubLink='https://github.com/tgraupne'
+            calendarLink='https://calendar.app.google/KicY9pSkoYKqWzZP8'
           />
           <TeamMemberField
             Logo={KenoLogo}
