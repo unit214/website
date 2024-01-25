@@ -50,7 +50,7 @@ export default function Header({
         style={{ opacity: opacity }}
         className={cn(
           'mt-5 flex max-h-[100px] w-full items-start justify-between px-5 lg:mt-12 lg:max-w-[1300px] lg:px-16',
-          className
+          className,
         )}
       >
         {clickOnLogoBehaviour === 'scrollUp' && (

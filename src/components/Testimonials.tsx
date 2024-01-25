@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { CSSProperties, useState } from 'react'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -42,7 +42,7 @@ function TestimonialSlide({ testimonial }: { testimonial: Testimonial }) {
           <div
             className={cn(
               'flex h-24 w-60 shrink-0 items-center justify-center bg-white p-10 text-black',
-              testimonial.website?.text === 'Unit A' && 'bg-black'
+              testimonial.website?.text === 'Unit A' && 'bg-black',
             )}
           >
             <NextImage
@@ -92,11 +92,13 @@ export default function Testimonials() {
                 nextEl: nextEl,
               }}
               loop={true}
-              style={{
-                '--swiper-pagination-color': '#FFFFFF',
-                '--swiper-pagination-bullet-inactive-color': '#FFFFFF',
-                '--swiper-pagination-bullet-horizontal-gap': '6px',
-              }}
+              style={
+                {
+                  '--swiper-pagination-color': '#FFFFFF',
+                  '--swiper-pagination-bullet-inactive-color': '#FFFFFF',
+                  '--swiper-pagination-bullet-horizontal-gap': '6px',
+                } as CSSProperties
+              }
             >
               {TESTIMONIALS.map((testimonial, index) => (
                 <SwiperSlide key={index}>
