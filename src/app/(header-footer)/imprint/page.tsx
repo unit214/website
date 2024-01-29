@@ -4,7 +4,7 @@ import { contactEmail } from '@/constant/contact'
 
 export default function ImprintPage() {
   return (
-    <div className='font-primary flex max-w-[500px] flex-col items-center gap-10 px-10 font-light'>
+    <div className='flex max-w-[500px] flex-col items-center gap-10 px-10 font-light'>
       <div className='flex flex-col items-center'>
         <h1>Impressum</h1>
         <span className='text-xl'>Angaben gemäß § 5 TMG</span>

@@ -54,7 +54,7 @@ function TeamMemberField({
       <Logo className='hidden w-[85px] lg:inline-flex' />
       <div className='flex flex-col gap-2.5'>
         <div className='flex items-center gap-2'>
-          <div className='font-primary text-xl font-semibold'>{name}</div>
+          <div className='text-xl font-semibold'>{name}</div>
           <ExternalReferences
             linkedInLink={linkedInLink}
             gitHubLink={gitHubLink}
@@ -62,10 +62,10 @@ function TeamMemberField({
             classNameLogo='w-4 h-4'
           />
         </div>
-        <span className='font-primary text-sm font-light'>{description}</span>
+        <span className='text-sm font-light'>{description}</span>
         {calendarLink && (
           <NextLink
-            className='font-primary text-sm font-light flex gap-1 items-center'
+            className='text-sm font-light flex gap-1 items-center'
             href={calendarLink}
             isExternalLink
           >

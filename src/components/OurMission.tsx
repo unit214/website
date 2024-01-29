@@ -33,7 +33,7 @@ function Mission() {
   return (
     <div className='flex flex-col gap-5'>
       <h1>Our Mission</h1>
-      <div className='font-primary max-w-[430px] text-xl font-normal'>
+      <div className='max-w-[430px] text-xl font-normal'>
         We provide creative, innovative consulting and high-quality software
         engineering tailored to our clients. <br /> <br /> Together, we achieve
         this by cultivating an open and sustainable environment that enables

@@ -118,12 +118,12 @@
 
   h1,
   .h1 {
-    @apply font-primary text-3xl font-semibold;
+    @apply font-sans text-3xl font-semibold;
   }
 
   h2,
   .h2 {
-    @apply font-primary text-2xl font-semibold;
+    @apply font-sans text-2xl font-semibold;
   }
 }
 
