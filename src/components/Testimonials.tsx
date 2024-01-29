@@ -23,7 +23,7 @@ function TestimonialSectionAmberBox() {
 function TestimonialSlide({ testimonial }: { testimonial: Testimonial }) {
   return (
     <div className='my-5 flex h-full min-h-[350px] w-full flex-col justify-around lg:flex-row lg:items-start lg:pt-14'>
-      <div className='font-primary flex w-full flex-col items-start gap-4 text-left text-sm font-light lg:w-1/2'>
+      <div className='flex w-full flex-col items-start gap-4 text-left text-sm font-light lg:w-1/2'>
         <span>"{testimonial.text}"</span>
         <span className='font-medium'>
           — {testimonial.source}
