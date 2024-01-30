@@ -232,3 +232,27 @@ y
     clip-path: polygon(0% 2%, 96% 2%, 99% 97%, 0% 97%);
   }
 }
+
+.icon-link {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+  display: none;
+  background: url(/icons/link.svg);
+}
+
+h1:hover .icon-link {
+  display: inline-block;
+}
+
+h2:hover .icon-link {
+  display: inline-block;
+}
+
+h3:hover .icon-link {
+  display: inline-block;
+}
+
+h4:hover .icon-link {
+  display: inline-block;
+}

@@ -1,3 +1,5 @@
+import { ReactElement } from 'react'
+
 export type Testimonial = {
   source: string
   text: string
@@ -8,4 +10,17 @@ export type Testimonial = {
 export type TestimonialWebsite = {
   text: string
   url: string
+}
+
+export type Meta = {
+  id: string
+  title: string
+  date: string
+  author: string
+  tags: string[]
+}
+
+export type Post = {
+  meta: Meta
+  content: ReactElement
 }
