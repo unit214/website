@@ -115,6 +115,7 @@ export default function WhoWeAre() {
             }
             linkedInLink='https://www.linkedin.com/in/kenodressel/'
             gitHubLink='https://github.com/kenodressel'
+            calendarLink='https://calendar.app.google/vL9yUjz599Xcdx9q8'
           />
           <TeamMemberField
             Logo={PhilippLogo}
