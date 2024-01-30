@@ -241,18 +241,20 @@ y
   background: url(/icons/link.svg);
 }
 
-h1:hover .icon-link {
+h1:hover .icon-link,
+h2:hover .icon-link,
+h3:hover .icon-link,
+h4:hover .icon-link,
+h5:hover .icon-link,
+h6:hover .icon-link {
   display: inline-block;
 }
 
-h2:hover .icon-link {
-  display: inline-block;
-}
-
-h3:hover .icon-link {
-  display: inline-block;
-}
-
-h4:hover .icon-link {
-  display: inline-block;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-margin-top: 160px;
 }
