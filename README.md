@@ -1,23 +1,12 @@
 # Unit 214 Website New
 
-## Build with
+## Development
 
-- Next.js 13 with App Router
-- React 18
-- TypeScript
-- Tailwind CSS 3 + [clsx](https://github.com/lukeed/clsx) + [tailwind-merge](https://github.com/dcastil/tailwind-merge)
-- Jest — Unit testing
-- Absolute Import and Path Alias — Import components using `@/` and `~/` prefix
-- ESLint — Find and fix problems in the code, also will **auto sort** imports
-- Prettier — Consistent formatting
-- Husky & Lint Staged - Run scripts on staged files before they are committed
-- Conventional Commit Lint
-- Github Actions — Check code on GitHub
-- Issue Autolink — Links issue on PR creation
-- Site Map — Automatically generate sitemap.xml
-- VS Code Snippets
+### 1. Prerequisites
 
-### 1. Install dependencies
+Make sure you have Node.js >= 18 installed.
+
+### 2. Install dependencies
 
 Please use **yarn** so the husky hooks can work properly:
 
@@ -25,7 +14,7 @@ Please use **yarn** so the husky hooks can work properly:
 yarn install
 ```
 
-### 2. Development server
+### 3. Development server
 
 The development server can be started using this command:
 
@@ -35,7 +24,7 @@ yarn dev
 
 The development server is then running on [http://localhost:3000](http://localhost:3000).
 
-### 3. Commit Message Convention
+### 4. Commit Message Convention
 
 This repository is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), which are mandatory to use when committing changes.
 
@@ -50,6 +39,23 @@ This repository is using [conventional commits](https://www.conventionalcommits.
 - `refactor`: A code change that neither fixes a bug nor adds a feature
 - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 - `test`: Adding missing tests or correcting existing tests
+
+## Build with
+
+- Next.js 14 with App Router
+- React 18
+- TypeScript
+- Tailwind CSS 3 + [clsx](https://github.com/lukeed/clsx) + [tailwind-merge](https://github.com/dcastil/tailwind-merge)
+- Jest — Unit testing
+- Absolute Import and Path Alias — Import components using `@/` and `~/` prefix
+- ESLint — Find and fix problems in the code, also will **auto sort** imports
+- Prettier — Consistent formatting
+- Husky & Lint Staged - Run scripts on staged files before they are committed
+- Conventional Commit Lint
+- Github Actions — Check code on GitHub
+- Issue Autolink — Links issue on PR creation
+- Site Map — Automatically generate sitemap.xml
+- VS Code Snippets
 
 ## Copyright
 
