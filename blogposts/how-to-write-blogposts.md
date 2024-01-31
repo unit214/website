@@ -1,6 +1,6 @@
 ---
 title: 'How to write blogposts'
-date: '2024-01-01'
+date: '2024-02-01'
 tags: ['Unit 214', 'Blog', 'Tutorial']
 author: 'Timo'
 ---

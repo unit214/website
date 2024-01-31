@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 import { BsArrowDownShort } from 'react-icons/bs'
 import { CgMouse } from 'react-icons/cg'

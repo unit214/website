@@ -1,5 +1,3 @@
-'use client'
-
 import Footer from '@/components/Footer'
 import HeaderAndMainClaim from '@/components/HeaderAndMainClaim'
 import LetsGetInTouch from '@/components/LetsGetInTouch'
@@ -19,7 +17,7 @@ export default function HomePage() {
           <WhoWeAre />
           <Testimonials />
           <LetsGetInTouch />
-          <Footer text='Imprint / Impressum' link='/imprint' />
+          <Footer />
         </div>
       </div>
     </main>

@@ -72,5 +72,6 @@ export async function getPosts(): Promise<Post[] | undefined> {
     }
   }
 
-  return posts.sort((a, b) => (a.meta.date < b.meta.date ? -1 : 1))
+  // Newer posts will be first in the list
+  return posts.sort((a, b) => (a.meta.date < b.meta.date ? 1 : -1))
 }
