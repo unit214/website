@@ -58,8 +58,8 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
   allPosts.forEach((p, i) => {
     if (p.meta.id === postId) {
       post = p
-      if (i > 0) previousPostId = allPosts[i - 1].meta.id
-      if (i < allPosts.length - 1) nextPostId = allPosts[i + 1].meta.id
+      if (i > 0) nextPostId = allPosts[i - 1].meta.id
+      if (i < allPosts.length - 1) previousPostId = allPosts[i + 1].meta.id
     }
   })
   if (!post) notFound()

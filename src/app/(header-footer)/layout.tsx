@@ -1,5 +1,3 @@
-'use client'
-
 import { ReactNode } from 'react'
 
 import CyanAmberHeaderBox from '@/components/CyanAmberHeaderBox'
@@ -24,7 +22,7 @@ export default function HeaderFooterLayout({
         <div className='w-full max-w-[1300px] px-10 lg:px-20 pt-5 grow'>
           {children}
         </div>
-        <Footer text='Home' link='/' />
+        <Footer />
       </div>
     </div>
   )
