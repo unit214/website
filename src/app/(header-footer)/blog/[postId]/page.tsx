@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 
-import 'highlight.js/styles/github-dark.css'
+import 'highlight.js/styles/github.css'
+import 'github-markdown-css/github-markdown-light.css'
 
 import { getPost, getPosts } from '@/lib/blog'
 
@@ -67,11 +68,11 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
 
   const pubDate = getFormattedDate(meta.date)
 
-  const tags = meta.tags.map((tag, i) => <div key={i}>{tag}</div>)
+  const tags = meta.tags.map((tag, i) => <code key={i}>{tag}</code>)
 
   return (
-    <>
-      <div className='flex flex-row justify-between my-5'>
+    <div className='flex flex-col'>
+      <div className='flex flex-row justify-between'>
         {previousPostId ? (
           <NextLink href={`${previousPostId}`}>Previous Post</NextLink>
         ) : (
@@ -83,16 +84,16 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
           <div></div>
         )}
       </div>
-      <div className='prose prose-lg max-w-[1100px] icon:no-underline'>
+      <div className='markdown-body blog-post'>
         <div className='pb-2 mb-2 border-b'>
           <h1 className='mb-0'>{meta.title}</h1>
-          <span className='mt-0 text-sm'>
-            Published on {pubDate} by {meta.author}
+          <span className='text-sm'>
+            Published on <b>{pubDate}</b> by <b>{meta.author}</b>
           </span>
-          <div className='flex flex-row gap-4'>{tags}</div>
+          <div className='flex flex-row gap-2 text-sm'>Tags: {tags}</div>
         </div>
         <article>{content}</article>
       </div>
-    </>
+    </div>
   )
 }
