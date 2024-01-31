@@ -1,29 +1,17 @@
-import { getPosts } from '@/lib/blog'
-
 import NextLink from '@/components/NextLink'
 
 import GreyDots from '~/svg/grey-dots.svg'
 
-export default async function Footer() {
-  const allPosts = await getPosts()
-  let mostRecentPostId: string | undefined
-  if (allPosts && allPosts.length > 0) {
-    mostRecentPostId = allPosts[0].meta.id
-  }
+export default function Footer() {
   return (
     <div className='relative mt-20 flex w-full justify-center pb-4 lg:max-w-[1300px]'>
       <div className='flex gap-4'>
         <NextLink href='/' className='text-xs text-neutral-700'>
           Home
         </NextLink>
-        {mostRecentPostId && (
-          <NextLink
-            href={`/blog/${mostRecentPostId}`}
-            className='text-xs text-neutral-700'
-          >
-            Blog
-          </NextLink>
-        )}
+        <NextLink href='/blog' className='text-xs text-neutral-700'>
+          Blog
+        </NextLink>
         <NextLink href='/imprint' className='text-xs text-neutral-700'>
           Imprint / Impressum
         </NextLink>

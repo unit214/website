@@ -74,12 +74,12 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
     <div className='flex flex-col'>
       <div className='flex flex-row justify-between'>
         {previousPostId ? (
-          <NextLink href={`${previousPostId}`}>Previous Post</NextLink>
+          <NextLink href={previousPostId}>Previous Post</NextLink>
         ) : (
           <div></div>
         )}
         {nextPostId ? (
-          <NextLink href={`${nextPostId}`}>Next Post</NextLink>
+          <NextLink href={nextPostId}>Next Post</NextLink>
         ) : (
           <div></div>
         )}
