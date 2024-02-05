@@ -66,7 +66,7 @@ export default function Testimonials() {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null)
 
   return (
-    <div className='relative flex h-[700px] w-full items-center justify-center lg:max-w-[1300px]'>
+    <div className='relative flex h-[700px] w-full items-center justify-center'>
       <TestimonialSectionAmberBox />
       <div className='bg-primary-red custom-angled-rectangle-red-testimonials-mobile lg:custom-angled-rectangle-red-testimonials h-[600px] w-full lg:h-[600px] lg:max-w-[1200px] '>
         <div className='relative mx-10 flex h-full flex-col py-20 text-white lg:mx-40'>

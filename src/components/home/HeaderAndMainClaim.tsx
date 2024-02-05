@@ -6,9 +6,7 @@ import { CgMouse } from 'react-icons/cg'
 
 import { isMobile } from '@/lib/utils'
 
-import CyanAmberHeaderBox from '@/components/CyanAmberHeaderBox'
-import Header from '@/components/Header'
-import MainClaim from '@/components/MainClaim'
+import Header, { HeaderBoxCyanAmber } from '@/components/Header'
 
 export default function HeaderAndMainClaim() {
   const [headerOpacity, setHeaderOpacity] = useState(0)
@@ -48,7 +46,7 @@ export default function HeaderAndMainClaim() {
   }
 
   return (
-    <CyanAmberHeaderBox className='sticky'>
+    <HeaderBoxCyanAmber className='sticky'>
       <div className='flex h-full w-full flex-col justify-center'>
         <Header
           className='absolute top-0'
@@ -78,6 +76,20 @@ export default function HeaderAndMainClaim() {
           </button>
         )}
       </div>
-    </CyanAmberHeaderBox>
+    </HeaderBoxCyanAmber>
+  )
+}
+
+function MainClaim() {
+  return (
+    <div className='text-main-mobile lg:text-main px-10 font-mono font-extrabold text-white lg:px-28'>
+      <span className='text-white/50'> UNLOCK YOUR </span> POTENTIAL
+      <br />
+      <span className='text-white/50'> WITH OUR </span> FULL STACK DEVELOPMENT
+      <br className='hidden sm:inline-flex' />
+      <span className='text-white/50'> AND </span>{' '}
+      <br className='inline-flex sm:hidden' />
+      IT CONSULTING
+    </div>
   )
 }

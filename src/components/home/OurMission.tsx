@@ -46,7 +46,7 @@ function Mission() {
 }
 export default function OurMission() {
   return (
-    <div className='flex w-full justify-center bg-neutral-100 px-10 py-14 lg:max-w-[1300px] lg:py-32'>
+    <div className='flex w-full justify-center bg-neutral-100 px-10 py-14 lg:py-32'>
       <div className='flex flex-col gap-28 lg:flex-row lg:items-center lg:gap-20'>
         <TailoredTechSolutions />
         <Mission />

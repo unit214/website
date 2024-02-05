@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import { FiMail } from 'react-icons/fi'
 
 import { cn } from '@/lib/utils'
@@ -7,17 +8,6 @@ import NextLink from '@/components/NextLink'
 import { contactEmail } from '@/constant/contact'
 
 import Unit214LogoBW from '~/svg/unit214_bw.svg'
-
-function ContactButtonContent() {
-  return (
-    <div className='flex h-9 w-fit items-center justify-center gap-1.5 rounded-full bg-white px-4 transition-opacity duration-200 ease-in hover:opacity-80'>
-      <span className='hidden text-sm font-semibold lg:flex'>
-        Let's get in touch!
-      </span>
-      <FiMail />
-    </div>
-  )
-}
 
 export default function Header({
   opacity,
@@ -73,6 +63,36 @@ export default function Header({
             <ContactButtonContent />
           </NextLink>
         )}
+      </div>
+    </div>
+  )
+}
+
+function ContactButtonContent() {
+  return (
+    <div className='flex h-9 w-fit items-center justify-center gap-1.5 rounded-full bg-white px-4 transition-opacity duration-200 ease-in hover:opacity-80'>
+      <span className='hidden text-sm font-semibold lg:flex'>
+        Let's get in touch!
+      </span>
+      <FiMail />
+    </div>
+  )
+}
+
+export function HeaderBoxCyanAmber({
+  children,
+  className,
+}: {
+  children: ReactNode
+  className: string
+}) {
+  return (
+    <div className={cn('-top-[540px] z-10 lg:-top-[690px]', className)}>
+      <div className='flex w-full justify-center'>
+        <div className='bg-primary-amber custom-angled-rectangle-amber-header absolute h-[700px] w-full justify-center lg:h-[824px]' />
+        <div className='bg-primary-cyan custom-angled-rectangle-cyan-animated-mobile lg:custom-angled-rectangle-cyan-animated h-[700px] w-full lg:h-[850px] lg:w-[1300px]'>
+          {children}
+        </div>
       </div>
     </div>
   )
