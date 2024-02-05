@@ -18,6 +18,8 @@ export type Meta = {
   date: string
   author: string
   tags: string[]
+  previewImage?: string
+  previewText: string
 }
 
 export type Post = {

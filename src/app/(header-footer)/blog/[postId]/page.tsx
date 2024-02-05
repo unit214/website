@@ -1,19 +1,16 @@
 import { notFound } from 'next/navigation'
+import { ReactElement } from 'react'
+import { HiArrowLongLeft, HiArrowLongRight } from 'react-icons/hi2'
 
 import 'highlight.js/styles/github.css'
 import 'github-markdown-css/github-markdown-light.css'
 
 import { getPost, getPosts } from '@/lib/blog'
+import { formatDate } from '@/lib/date'
 
 import NextLink from '@/components/NextLink'
 
-import { Post } from '@/constant/models'
-
-function getFormattedDate(dateString: string): string {
-  return new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(
-    new Date(dateString),
-  )
-}
+import { Meta, Post } from '@/constant/models'
 
 type BlogPostProps = {
   params: {
@@ -52,48 +49,76 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
   if (!allPosts) notFound()
 
   let post: Post | undefined
-  let previousPostId: string | undefined
-  let nextPostId: string | undefined
+  let previousPostMeta: Meta | undefined
+  let nextPostMeta: Meta | undefined
 
   allPosts.forEach((p, i) => {
     if (p.meta.id === postId) {
       post = p
-      if (i > 0) nextPostId = allPosts[i - 1].meta.id
-      if (i < allPosts.length - 1) previousPostId = allPosts[i + 1].meta.id
+      if (i > 0) nextPostMeta = allPosts[i - 1].meta
+      if (i < allPosts.length - 1) previousPostMeta = allPosts[i + 1].meta
     }
   })
   if (!post) notFound()
 
   const { meta, content } = post
 
-  const pubDate = getFormattedDate(meta.date)
+  const pubDate = formatDate(meta.date)
 
   const tags = meta.tags.map((tag, i) => <code key={i}>{tag}</code>)
 
   return (
     <div className='flex flex-col'>
-      <div className='flex flex-row justify-between'>
-        {previousPostId ? (
-          <NextLink href={previousPostId}>Previous Post</NextLink>
-        ) : (
-          <div></div>
-        )}
-        {nextPostId ? (
-          <NextLink href={nextPostId}>Next Post</NextLink>
-        ) : (
-          <div></div>
-        )}
-      </div>
       <div className='markdown-body blog-post'>
-        <div className='pb-2 mb-2 border-b'>
+        <div className='pb-2 mb-5 border-b'>
           <h1 className='mb-0'>{meta.title}</h1>
-          <span className='text-sm'>
-            Published on <b>{pubDate}</b> by <b>{meta.author}</b>
+          <span className='text-sm font-light'>
+            Published on {pubDate} by {meta.author}
           </span>
-          <div className='flex flex-row gap-2 text-sm'>Tags: {tags}</div>
+          <div className='flex flex-row gap-2 text-sm font-light'>
+            Tags: {tags}
+          </div>
         </div>
-        <article>{content}</article>
+        <article className='border-b'>{content}</article>
+      </div>
+      <div className='flex flex-col lg:flex-row items-center justify-between my-10 gap-10'>
+        <NextPostLink
+          postMeta={previousPostMeta}
+          linkText='Previous'
+          linkIcon={<HiArrowLongLeft size={24} />}
+        />
+
+        <NextPostLink
+          postMeta={nextPostMeta}
+          linkText='Next'
+          linkIcon={<HiArrowLongRight size={24} />}
+        />
       </div>
     </div>
+  )
+}
+
+function NextPostLink({
+  postMeta,
+  linkText,
+  linkIcon,
+}: {
+  postMeta?: Meta
+  linkText: 'Next' | 'Previous'
+  linkIcon: ReactElement
+}) {
+  return postMeta ? (
+    <NextLink
+      href={postMeta.id}
+      className='flex flex-col no-underline transition-opacity duration-200 ease-in hover:opacity-80'
+    >
+      <div className='flex flex-col items-center gap-1'>
+        <span className='font-light'>{linkText} Post</span>
+        <span className='font-semibold text-center'>{postMeta.title}</span>
+        {linkIcon}
+      </div>
+    </NextLink>
+  ) : (
+    <div></div>
   )
 }

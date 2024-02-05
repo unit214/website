@@ -29,6 +29,8 @@ export async function getPost(postId: string): Promise<Post | undefined> {
     date: string
     author: string
     tags: string[]
+    previewImage?: string
+    previewText: string
   }>({
     source: fileContent,
     options: {
@@ -55,6 +57,8 @@ export async function getPost(postId: string): Promise<Post | undefined> {
     date: frontmatter.date,
     tags: frontmatter.tags,
     author: frontmatter.author,
+    previewImage: frontmatter.previewImage,
+    previewText: frontmatter.previewText,
   }
 
   return {

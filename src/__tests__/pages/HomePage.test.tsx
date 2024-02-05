@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
-import HomePage from '@/app/page'
+import HeaderAndMainClaim from '@/components/home/HeaderAndMainClaim'
 
 jest.mock('swiper/react', () => ({
   Swiper: () => null,
@@ -12,7 +12,7 @@ jest.mock('swiper/css', () => ({}))
 
 describe('Homepage', () => {
   it('renders the Components', () => {
-    render(<HomePage />)
+    render(<HeaderAndMainClaim />)
 
     const heading = screen.getByText(/FULL STACK DEVELOPMENT/i)
 

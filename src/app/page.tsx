@@ -2,6 +2,7 @@ import Footer from '@/components/Footer'
 import HeaderAndMainClaim from '@/components/home/HeaderAndMainClaim'
 import LetsGetInTouch from '@/components/home/LetsGetInTouch'
 import OurMission from '@/components/home/OurMission'
+import TechJournal from '@/components/home/TechJournal'
 import Testimonials from '@/components/home/Testimonials'
 import WhatWeDo from '@/components/home/WhatWeDo'
 import WhoWeAre from '@/components/home/WhoWeAre'
@@ -17,6 +18,7 @@ export default function HomePage() {
             <OurMission />
             <WhoWeAre />
             <Testimonials />
+            <TechJournal />
             <LetsGetInTouch />
           </div>
           <Footer />
