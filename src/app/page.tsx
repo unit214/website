@@ -1,10 +1,10 @@
 import Footer from '@/components/Footer'
-import HeaderAndMainClaim from '@/components/HeaderAndMainClaim'
-import LetsGetInTouch from '@/components/LetsGetInTouch'
-import OurMission from '@/components/OurMission'
-import Testimonials from '@/components/Testimonials'
-import WhatWeDo from '@/components/WhatWeDo'
-import WhoWeAre from '@/components/WhoWeAre'
+import HeaderAndMainClaim from '@/components/home/HeaderAndMainClaim'
+import LetsGetInTouch from '@/components/home/LetsGetInTouch'
+import OurMission from '@/components/home/OurMission'
+import Testimonials from '@/components/home/Testimonials'
+import WhatWeDo from '@/components/home/WhatWeDo'
+import WhoWeAre from '@/components/home/WhoWeAre'
 
 export default function HomePage() {
   return (
@@ -12,11 +12,13 @@ export default function HomePage() {
       <div className='relative'>
         <HeaderAndMainClaim />
         <div className='flex w-full flex-col items-center justify-center'>
-          <WhatWeDo />
-          <OurMission />
-          <WhoWeAre />
-          <Testimonials />
-          <LetsGetInTouch />
+          <div className='w-full lg:max-w-[1300px]'>
+            <WhatWeDo />
+            <OurMission />
+            <WhoWeAre />
+            <Testimonials />
+            <LetsGetInTouch />
+          </div>
           <Footer />
         </div>
       </div>
