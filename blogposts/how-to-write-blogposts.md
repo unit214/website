@@ -3,6 +3,7 @@ title: 'How to write blogposts'
 date: '2024-02-01'
 tags: ['Unit 214', 'Blog', 'Tutorial']
 author: 'Timo'
+previewText: Blogposts are a cool way of presenting content. In this article you will learn how to easily create your own blogposts using Markdown.
 ---
 
 ## Contents
@@ -233,15 +234,15 @@ Some text to show that the reference links can follow later.
 Here's our logo (hover to see the title text), taken from the public folder of the repo:
 
 Inline-style:
-![alt text](/blogposts/unit214.jpg "Logo Title Text 1")
+![alt text](/blogposts/preview/default.jpg "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: /blogposts/unit214.jpg "Logo Title Text 2"
+[logo]: /blogposts/preview/default.jpg "Logo Title Text 2"
 
 To change an images size use the `<img>` element:
-<img src="/blogposts/unit214.jpg" width="200" height="100"></img>
+<img src="/blogposts/preview/default.jpg" width="200" height="100"></img>
 
 You can also use external links as images:
 ![Minion](https://octodex.github.com/images/minion.png)
@@ -259,15 +260,15 @@ With a reference later in the document defining the URL location:
 Here's our logo (hover to see the title text), taken from the public folder of the repo:
 
 Inline-style:
-![alt text](/blogposts/unit214.jpg 'Logo Title Text 1')
+![alt text](/blogposts/preview/default.jpg 'Logo Title Text 1')
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: /blogposts/unit214.jpg 'Logo Title Text 2'
+[logo]: /blogposts/preview/default.jpg 'Logo Title Text 2'
 
-To change its size use the `<img>` element:
-<img src="/blogposts/unit214.jpg" width="200" height="100"></img>
+To change an images size use the `<img>` element:
+<img src="/blogposts/preview/default.jpg" width="200" height="100"></img>
 
 You can also use external links as images:
 ![Minion](https://octodex.github.com/images/minion.png)
