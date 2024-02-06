@@ -57,6 +57,10 @@ This repository is using [conventional commits](https://www.conventionalcommits.
 - Site Map — Automatically generate sitemap.xml
 - VS Code Snippets
 
+## Blogposts
+
+See [how-to-write-blogposts.md](/blogposts/examples/how-to-write-blogposts.md).
+
 ## Copyright
 
 Based on ts-nextjs-tailwind-starter by theodorusclarence
