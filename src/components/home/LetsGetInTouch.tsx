@@ -18,11 +18,11 @@ export default function LetsGetInTouch() {
         <FiMail size={32} />
       </NextLink>
       <NextLink
-        className='flex items-center gap-1'
+        className='flex items-center gap-1 lg:hidden'
         href='https://calendar.app.google/KicY9pSkoYKqWzZP8'
         isExternalLink
       >
-        Schedule a meeting with us! <SiGooglecalendar />
+        Book a meeting with us! <SiGooglecalendar />
       </NextLink>
     </div>
   )

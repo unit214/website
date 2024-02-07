@@ -8,7 +8,7 @@ export default async function TechJournal() {
   // Display tech journal only if at least one post exists
   if (!allPosts || allPosts.length === 0) return <></>
   return (
-    <div className='flex w-full justify-center px-10 py-20 lg:px-20'>
+    <div className='flex w-full justify-center px-10 pb-20 pt-20 lg:px-20 lg:pb-0'>
       <div className='flex flex-col items-start'>
         <h1 className='mb-10 whitespace-nowrap'>Tech Journal</h1>
         <div className='flex flex-col items-center justify-between gap-14 lg:flex-row lg:items-start lg:gap-10'>
