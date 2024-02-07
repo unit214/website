@@ -17,8 +17,8 @@ export default function HeaderFooterLayout({
           clickOnContactBehaviour='sendMail'
         />
       </HeaderBoxCyanAmber>
-      <div className='flex w-full flex-col items-center justify-center pt-[160px] min-h-screen'>
-        <div className='w-full max-w-[1300px] px-10 lg:px-20 pt-5 grow'>
+      <div className='flex min-h-screen w-full flex-col items-center justify-center pt-[160px]'>
+        <div className='w-full max-w-[1300px] grow px-10 pt-5 lg:px-20'>
           {children}
         </div>
         <Footer />

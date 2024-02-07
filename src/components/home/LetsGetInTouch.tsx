@@ -7,7 +7,7 @@ import { contactEmail } from '@/constant/contact'
 
 export default function LetsGetInTouch() {
   return (
-    <div className='flex flex-col mb-8 mt-14 lg:mb-28 lg:mt-24 gap-5 items-center'>
+    <div className='mb-8 mt-14 flex flex-col items-center gap-5 lg:mb-28 lg:mt-24'>
       <NextLink
         className='flex w-fit items-center justify-center gap-3 rounded-full bg-black px-6 py-3 text-white no-underline transition-opacity duration-200 ease-in hover:opacity-70 lg:px-8'
         href={`mailto:${contactEmail}`}
@@ -18,7 +18,7 @@ export default function LetsGetInTouch() {
         <FiMail size={32} />
       </NextLink>
       <NextLink
-        className='flex gap-1 items-center'
+        className='flex items-center gap-1'
         href='https://calendar.app.google/KicY9pSkoYKqWzZP8'
         isExternalLink
       >

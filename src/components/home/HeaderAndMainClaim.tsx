@@ -82,7 +82,7 @@ export default function HeaderAndMainClaim() {
 
 function MainClaim() {
   return (
-    <div className='text-main-mobile lg:text-main px-10 font-mono font-extrabold text-white lg:px-28'>
+    <div className='px-10 font-mono text-main-mobile font-extrabold text-white lg:px-28 lg:text-main'>
       <span className='text-white/50'> UNLOCK YOUR </span> POTENTIAL
       <br />
       <span className='text-white/50'> WITH OUR </span> FULL STACK DEVELOPMENT
