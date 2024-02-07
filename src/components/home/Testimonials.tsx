@@ -18,7 +18,7 @@ import { TESTIMONIALS } from '@/constant/testimonials'
 
 function TestimonialSectionAmberBox() {
   return (
-    <div className='bg-primary-amber custom-angled-rectangle-amber-testimonials-animated-mobile lg:custom-angled-rectangle-amber-animated-testimonials absolute left-0 h-[700px] w-[80%] lg:w-[500px]' />
+    <div className='custom-angled-rectangle-amber-testimonials-animated-mobile lg:custom-angled-rectangle-amber-animated-testimonials absolute left-0 h-[700px] w-[80%] bg-primary-amber lg:w-[500px]' />
   )
 }
 
@@ -68,7 +68,7 @@ export default function Testimonials() {
   return (
     <div className='relative flex h-[700px] w-full items-center justify-center'>
       <TestimonialSectionAmberBox />
-      <div className='bg-primary-red custom-angled-rectangle-red-testimonials-mobile lg:custom-angled-rectangle-red-testimonials h-[600px] w-full lg:h-[600px] lg:max-w-[1200px] '>
+      <div className='custom-angled-rectangle-red-testimonials-mobile lg:custom-angled-rectangle-red-testimonials h-[600px] w-full bg-primary-red lg:h-[600px] lg:max-w-[1200px] '>
         <div className='relative mx-10 flex h-full flex-col py-20 text-white lg:mx-40'>
           <h1>
             Why people love

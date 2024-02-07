@@ -89,8 +89,8 @@ export function HeaderBoxCyanAmber({
   return (
     <div className={cn('-top-[540px] z-10 lg:-top-[690px]', className)}>
       <div className='flex w-full justify-center'>
-        <div className='bg-primary-amber custom-angled-rectangle-amber-header absolute h-[700px] w-full justify-center lg:h-[824px]' />
-        <div className='bg-primary-cyan custom-angled-rectangle-cyan-animated-mobile lg:custom-angled-rectangle-cyan-animated h-[700px] w-full lg:h-[850px] lg:w-[1300px]'>
+        <div className='custom-angled-rectangle-amber-header absolute h-[700px] w-full justify-center bg-primary-amber lg:h-[824px]' />
+        <div className='custom-angled-rectangle-cyan-animated-mobile lg:custom-angled-rectangle-cyan-animated h-[700px] w-full bg-primary-cyan lg:h-[850px] lg:w-[1300px]'>
           {children}
         </div>
       </div>

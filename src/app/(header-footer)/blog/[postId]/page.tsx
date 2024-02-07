@@ -70,7 +70,7 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
   return (
     <div className='flex flex-col'>
       <div className='markdown-body blog-post'>
-        <div className='pb-2 mb-5 border-b'>
+        <div className='mb-5 border-b pb-2'>
           <h1 className='mb-0'>{meta.title}</h1>
           <span className='text-sm font-light'>
             Published on {pubDate} by {meta.author}
@@ -81,7 +81,7 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
         </div>
         <article className='border-b'>{content}</article>
       </div>
-      <div className='flex flex-col lg:flex-row items-center justify-between my-10 gap-10'>
+      <div className='my-10 flex flex-col items-center justify-between gap-10 lg:flex-row'>
         <NextPostLink
           postMeta={previousPostMeta}
           linkText='Previous'
@@ -114,7 +114,7 @@ function NextPostLink({
     >
       <div className='flex flex-col items-center gap-1'>
         <span className='font-light'>{linkText} Post</span>
-        <span className='font-semibold text-center'>{postMeta.title}</span>
+        <span className='text-center font-semibold'>{postMeta.title}</span>
         {linkIcon}
       </div>
     </NextLink>

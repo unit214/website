@@ -65,7 +65,7 @@ function TeamMemberField({
         <span className='text-sm font-light'>{description}</span>
         {calendarLink && (
           <NextLink
-            className='text-sm font-light flex gap-1 items-center'
+            className='flex items-center gap-1 text-sm font-light'
             href={calendarLink}
             isExternalLink
           >
