@@ -69,7 +69,7 @@ function TeamMemberField({
             href={calendarLink}
             isExternalLink
           >
-            Schedule a meeting with me! <SiGooglecalendar />
+            Book a meeting with me! <SiGooglecalendar />
           </NextLink>
         )}
       </div>

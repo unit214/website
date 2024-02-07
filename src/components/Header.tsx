@@ -90,9 +90,9 @@ export function HeaderPolygonsCyanAmber({
     <div className={cn('-top-[540px] z-10 lg:-top-[690px]', className)}>
       <div className='flex w-full justify-center'>
         {/* Amber polygon */}
-        <div className='header-polygon-amber absolute h-[700px] w-full justify-center bg-primary-amber lg:h-[824px]' />
+        <div className='header-polygon-amber absolute h-[700px] w-full justify-center lg:h-[824px]' />
         {/* Cyan polygon */}
-        <div className='header-polygon-cyan h-[700px] w-full bg-primary-cyan lg:h-[850px] lg:w-[1300px]'>
+        <div className='header-polygon-cyan h-[700px] w-full lg:h-[850px] lg:w-[1300px]'>
           {children}
         </div>
       </div>
