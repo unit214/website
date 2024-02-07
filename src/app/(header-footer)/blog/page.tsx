@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
 
 import { getPosts } from '@/lib/blog'
 
@@ -11,6 +11,10 @@ export default async function BlogPage() {
   if (mostRecentPostId) {
     redirect(`blog/${mostRecentPostId}`)
   } else {
-    return notFound()
+    return (
+      <div className='flex w-full justify-center'>
+        <h1>Coming soon...</h1>
+      </div>
+    )
   }
 }
