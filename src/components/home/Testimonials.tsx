@@ -16,12 +16,6 @@ import NextLink from '@/components/NextLink'
 import { Testimonial } from '@/constant/models'
 import { TESTIMONIALS } from '@/constant/testimonials'
 
-function TestimonialSectionAmberBox() {
-  return (
-    <div className='custom-angled-rectangle-amber-testimonials-animated-mobile lg:custom-angled-rectangle-amber-animated-testimonials absolute left-0 h-[700px] w-[80%] bg-primary-amber lg:w-[500px]' />
-  )
-}
-
 function TestimonialSlide({ testimonial }: { testimonial: Testimonial }) {
   return (
     <div className='my-5 flex h-full min-h-[350px] w-full flex-col justify-around lg:flex-row lg:items-start lg:pt-14'>
@@ -67,8 +61,10 @@ export default function Testimonials() {
 
   return (
     <div className='relative flex h-[700px] w-full items-center justify-center'>
-      <TestimonialSectionAmberBox />
-      <div className='custom-angled-rectangle-red-testimonials-mobile lg:custom-angled-rectangle-red-testimonials h-[600px] w-full bg-primary-red lg:h-[600px] lg:max-w-[1200px] '>
+      {/* Amber polygon */}
+      <div className='testimonials-polygon-amber-animated absolute left-0' />
+      {/* Red polygon */}
+      <div className='testimonials-polygon-red'>
         <div className='relative mx-10 flex h-full flex-col py-20 text-white lg:mx-40'>
           <h1>
             Why people love

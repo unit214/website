@@ -1,5 +1,3 @@
-'use client'
-
 import { formatDate } from '@/lib/date'
 
 import NextImage from '@/components/NextImage'
