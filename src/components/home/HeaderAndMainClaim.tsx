@@ -6,7 +6,7 @@ import { CgMouse } from 'react-icons/cg'
 
 import { isMobile } from '@/lib/utils'
 
-import Header, { HeaderBoxCyanAmber } from '@/components/Header'
+import Header, { HeaderPolygonsCyanAmber } from '@/components/Header'
 
 export default function HeaderAndMainClaim() {
   const [headerOpacity, setHeaderOpacity] = useState(0)
@@ -46,7 +46,7 @@ export default function HeaderAndMainClaim() {
   }
 
   return (
-    <HeaderBoxCyanAmber className='sticky'>
+    <HeaderPolygonsCyanAmber className='sticky'>
       <div className='flex h-full w-full flex-col justify-center'>
         <Header
           className='absolute top-0'
@@ -76,7 +76,7 @@ export default function HeaderAndMainClaim() {
           </button>
         )}
       </div>
-    </HeaderBoxCyanAmber>
+    </HeaderPolygonsCyanAmber>
   )
 }
 

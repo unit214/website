@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer'
+import BookAMeeting from '@/components/home/BookAMeeting'
 import HeaderAndMainClaim from '@/components/home/HeaderAndMainClaim'
 import LetsGetInTouch from '@/components/home/LetsGetInTouch'
 import OurMission from '@/components/home/OurMission'
@@ -19,6 +20,7 @@ export default function HomePage() {
             <WhoWeAre />
             <Testimonials />
             <TechJournal />
+            <BookAMeeting />
             <LetsGetInTouch />
           </div>
           <Footer />

@@ -128,37 +128,97 @@
 }
 
 @layer utilities {
-  .custom-angled-rectangle-cyan-animated {
-    animation: angleChangeCyan 20s infinite;
+  /* Polygons */
+
+  /* Header */
+  .header-polygon-cyan {
+    animation: angleChangeHeaderPolygonCyanMobile 20s infinite;
+    /* Desktop */
+    @media screen(lg) {
+      animation: angleChangeHeaderPolygonCyan 20s infinite;
+    }
   }
 
-  .custom-angled-rectangle-cyan-animated-mobile {
-    animation: angleChangeCyanMobile 20s infinite;
-  }
-
-  .custom-angled-rectangle-amber-animated-testimonials {
-    animation: angleChangeAmber 20s infinite;
-  }
-
-  .custom-angled-rectangle-amber-testimonials-animated-mobile {
-    animation: angleChangeAmberMobile 20s infinite;
-  }
-
-  .custom-angled-rectangle-cyan {
-    clip-path: polygon(0% 0%, 100% 0%, 98.76% 91.43%, 3.13% 100%);
-  }
-
-  .custom-angled-rectangle-amber-header {
+  .header-polygon-amber {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
   }
 
-  .custom-angled-rectangle-red-testimonials {
-    clip-path: polygon(2.5% 0%, 100% 1.5%, 98.5% 97%, 0% 100%);
+  /* Testimonials */
+  .testimonials-polygon-red {
+    background-color: theme('colors.primary-red');
+    width: 100%;
+    min-height: 592px;
+    clip-path: polygon(0% 0%, 100% 1.5%, 100% 97%, 0% 100%);
+    /* Desktop */
+    @media screen(lg) {
+      clip-path: polygon(2.52% 0.11%, 100% 2.58%, 98.54% 94.34%, 0% 99.94%);
+      max-width: 1236px;
+    }
   }
 
-  .custom-angled-rectangle-red-testimonials-mobile {
-    clip-path: polygon(0% 0%, 100% 1.5%, 100% 97%, 0% 100%);
+  .testimonials-polygon-amber-animated {
+    background-color: theme('colors.primary-amber');
+    width: 80%;
+    height: 694px;
+    animation: angleChangeTestimonialsPolygonAmberMobile 20s infinite;
+    /* Desktop */
+    @media screen(lg) {
+      animation: angleChangeTestimonialsPolygonAmber 20s infinite;
+      width: 478px;
+    }
   }
+
+  /* Book A Meeting */
+  .book-a-meeting-polygon-cyan {
+    background-color: theme('colors.primary-cyan');
+    clip-path: polygon(0% 4.19%, 101.67% 0.08%, 101.67% 99.93%, 0% 96.19%);
+    width: 100%;
+    min-height: 400px;
+    /* Desktop */
+    @media screen(lg) {
+      clip-path: polygon(0.04% 0.09%, 99.93% 2.12%, 97.1% 98.31%, 1.81% 99.88%);
+      max-width: 1296px;
+      min-height: 616px;
+    }
+  }
+
+  .book-a-meeting-polygon-amber {
+    background-color: theme('colors.primary-amber');
+    clip-path: polygon(114.15% 95.69%, 0% 99.77%, 0% 0.62%, 114.15% 4.34%);
+    width: 154px;
+    height: 123px;
+    /* Desktop */
+    @media screen(lg) {
+      clip-path: polygon(
+        99.86% 99.71%,
+        0.05% 97.69%,
+        2.87% 1.71%,
+        98.09% 0.15%
+      );
+      width: 505px;
+      height: 220px;
+    }
+  }
+
+  .book-a-meeting-polygon-white {
+    background-color: white;
+    clip-path: polygon(0% 0.14%, 102.14% 3.09%, 102.14% 97.22%, 0% 99.71%);
+    width: 100%;
+    height: 262px;
+    /* Desktop */
+    @media screen(lg) {
+      clip-path: polygon(
+        1.29% 1.94%,
+        98.28% 0.04%,
+        99.63% 97.99%,
+        0.44% 96.39%
+      );
+      max-width: 1130px;
+      height: 439px;
+    }
+  }
+
+  /* Other utilities */
 
   .gradient-mask-r-90 {
     mask-image: linear-gradient(
@@ -193,7 +253,7 @@ y
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 */
 
-@keyframes angleChangeCyanMobile {
+@keyframes angleChangeHeaderPolygonCyanMobile {
   0%,
   100% {
     clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
@@ -203,7 +263,7 @@ y
   }
 }
 
-@keyframes angleChangeCyan {
+@keyframes angleChangeHeaderPolygonCyan {
   0%,
   100% {
     clip-path: polygon(0% 0%, 100% 0%, 98.76% 91.43%, 3.13% 100%);
@@ -213,7 +273,7 @@ y
   }
 }
 
-@keyframes angleChangeAmber {
+@keyframes angleChangeTestimonialsPolygonAmber {
   0%,
   100% {
     clip-path: polygon(0% 3%, 98% 0%, 100% 100%, 0% 95%);
@@ -223,7 +283,7 @@ y
   }
 }
 
-@keyframes angleChangeAmberMobile {
+@keyframes angleChangeTestimonialsPolygonAmberMobile {
   0%,
   100% {
     clip-path: polygon(0% 3%, 98% 0%, 100% 100%, 0% 95%);
