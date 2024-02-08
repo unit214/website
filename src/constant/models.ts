@@ -15,7 +15,7 @@ export type TestimonialWebsite = {
 export type Meta = {
   id: string
   title: string
-  date: string
+  date: Date
   author: string
   tags: string[]
   previewImage?: string
