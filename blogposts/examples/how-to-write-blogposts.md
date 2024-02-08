@@ -100,22 +100,19 @@ Alt-H2
 ```
 
 # H1
-
 ## H2
-
 ### H3
-
 #### H4
-
 ##### H5
-
 ###### H6
 
 Alternatively, for H1 and H2, an underline-ish style:
 
-# Alt-H1
+Alt-H1
+======
 
-## Alt-H2
+Alt-H2
+------
 
 ## Emphasis
 
@@ -129,9 +126,9 @@ Combined emphasis with **asterisks and _underscores_**.
 Strikethrough uses two tildes. ~~Scratch this.~~
 ```
 
-Emphasis, aka italics, with _asterisks_ or _underscores_.
+Emphasis, aka italics, with *asterisks* or _underscores_.
 
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
 
 Combined emphasis with **asterisks and _underscores_**.
 
@@ -162,8 +159,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 1. First ordered list item
 2. Another item
-   - Unordered sub-list.
-3. Actual numbers don't matter, just that it's a number
+   * Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
    1. Ordered sub-list
 4. And another item.
 
@@ -173,11 +170,9 @@ Strikethrough uses two tildes. ~~Scratch this.~~
    Note that this line is separate, but within the same paragraph.  
    (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
-- Unordered list can use asterisks
-
-* Or minuses
-
-- Or pluses
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
 
 ## Task lists
 
@@ -188,11 +183,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 - [x] done
 ```
 
-- [ ] to do
-- [x] done
-
 * [ ] to do
 * [x] done
+- [ ] to do
+- [x] done
 
 ## Links
 
@@ -272,19 +266,19 @@ With a reference later in the document defining the URL location:
 Here's our logo (hover to see the title text), taken from the public folder of the repo:
 
 Inline-style:
-![alt text](/blogposts/preview/default.jpg 'Logo Title Text 1')
+![alt text](/blogposts/preview/default.jpg "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: /blogposts/preview/default.jpg 'Logo Title Text 2'
+[logo]: /blogposts/preview/default.jpg "Logo Title Text 2"
 
 To change an images size use the `<img>` element:
 <img src="/blogposts/preview/default.jpg" width="200" height="100"></img>
 
 You can also use external links as images:
 ![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg 'The Stormtroopocat')
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
 Like links, Images also have a footnote style syntax
 
@@ -292,7 +286,7 @@ Like links, Images also have a footnote style syntax
 
 With a reference later in the document defining the URL location:
 
-[id]: https://octodex.github.com/images/dojocat.jpg 'The Dojocat'
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
 ## Footnotes
 
@@ -491,43 +485,43 @@ Markdown | Less | Pretty
 
 Colons can be used to align columns.
 
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----: |
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don't need to make the
 raw Markdown line up prettily. You can also use inline Markdown.
 
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
 
-| First Header | Second Header |
-| ------------ | ------------- |
-| Content Cell | Content Cell  |
-| Content Cell | Content Cell  |
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
-| Command    | Description                                    |
-| ---------- | ---------------------------------------------- |
-| git status | List all new or modified files                 |
-| git diff   | Show file differences that haven't been staged |
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
 
-| Command      | Description                                        |
-| ------------ | -------------------------------------------------- |
-| `git status` | List all _new or modified_ files                   |
-| `git diff`   | Show file differences that **haven't been** staged |
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
 
 | Left-aligned | Center-aligned | Right-aligned |
-| :----------- | :------------: | ------------: |
-| git status   |   git status   |    git status |
-| git diff     |    git diff    |      git diff |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
 
 | Name     | Character |
-| -------- | --------- |
+| ---      | ---       |
 | Backtick | `         |
 | Pipe     | \|        |
 
@@ -551,12 +545,10 @@ Quote break.
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
 > Blockquotes can also be nested...
->
-> > ...by using additional greater-than signs right next to each other...
-> >
+>> ...by using additional greater-than signs right next to each other...
 > > > ...or with spaces between arrows.
 
 ## Inline HTML
@@ -603,15 +595,13 @@ Three or more...
 
 Hyphens
 
----
+***
 
 Asterisks
 
----
+___
 
 Underscores
-
----
 
 ## YouTube Videos
 
