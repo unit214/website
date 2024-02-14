@@ -21,7 +21,10 @@ type BlogPostProps = {
 export async function generateStaticParams() {
   const posts = await getPosts()
 
-  if (!posts) return []
+  // TODO change to empty array once https://github.com/vercel/next.js/issues/61213 is resolved
+  if (!posts || posts.length === 0) {
+    return [{ postId: 'none' }]
+  }
 
   return posts.map((post) => ({
     postId: post.meta.id,
@@ -46,7 +49,7 @@ export async function generateMetadata({ params: { postId } }: BlogPostProps) {
 export default async function BlogPost({ params: { postId } }: BlogPostProps) {
   const allPosts = await getPosts()
 
-  if (!allPosts) notFound()
+  if (!allPosts || allPosts.length === 0) notFound()
 
   let post: Post | undefined
   let previousPostMeta: Meta | undefined

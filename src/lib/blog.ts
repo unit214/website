@@ -19,10 +19,15 @@ const allBlogPostIds = fs
   })
 
 export async function getPost(postId: string): Promise<Post | undefined> {
-  const fileContent = fs.readFileSync(
-    path.join(process.cwd(), `${BLOG_POST_FOLDER}/${postId}.md`),
-    'utf8',
-  )
+  let fileContent
+  try {
+    fileContent = fs.readFileSync(
+      path.join(process.cwd(), `${BLOG_POST_FOLDER}/${postId}.md`),
+      'utf8',
+    )
+  } catch (err) {
+    return undefined
+  }
 
   const { frontmatter, content } = await compileMDX<{
     title: string
