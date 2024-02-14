@@ -129,6 +129,7 @@ export default function WhoWeAre() {
             }
             linkedInLink='https://www.linkedin.com/in/philipp-piwowarsky/'
             gitHubLink='https://github.com/thepiwo'
+            calendarLink='https://calendar.app.google/eJDr4qYncBod3xsi7'
           />
           <TeamMemberField
             Logo={TimoLogo}
