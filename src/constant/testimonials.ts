@@ -20,6 +20,15 @@ export const TESTIMONIALS: Testimonial[] = [
     },
   },
   {
+    source: 'Ludovic Cheng -',
+    text: 'We are pleased with the expertise and efficiency demonstrated by Unit 214, as they delivered high-quality software swiftly, making substantial contributions to both our PHP APIs and various projects across major frontend frameworks.',
+    logo: '/svg/logo-commanders-act.svg',
+    website: {
+      text: 'Commanders Act',
+      url: 'https://www.commandersact.com/',
+    },
+  },
+  {
     source: 'Emil Wagner - Managing Director at',
     text: 'Unit 214 has been a reliable partner for years, they enable us to add expert capacity in a wide range of blockchain projects, from smart contract development over Web3 integration to the conception of an NFT sale and ticketing-system. With the start of the AI-era their specialty consultant has provided us with in-depth knowledge and their senior team has helped us to successfully launch an AI-based product.',
     logo: '/images/logo-apeunit.png',
