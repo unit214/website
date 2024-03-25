@@ -1,4 +1,4 @@
-import { ReactElement } from 'react'
+import { FC, ReactElement, SVGProps } from 'react'
 
 export type Testimonial = {
   source: string
@@ -25,4 +25,14 @@ export type Meta = {
 export type Post = {
   meta: Meta
   content: ReactElement
+}
+
+export type TeamMember = {
+  name: string
+  logo: FC<SVGProps<SVGSVGElement>>
+  description: ReactElement
+  linkedInLink: string
+  gitHubLink: string
+  calendarLink?: string
+  calendarRedirectSegment?: string // local url segment used to redirect to calendar link ({baseUrl}/{calendarRedirectUrl})
 }
