@@ -4,6 +4,7 @@ import { SiGooglecalendar } from 'react-icons/si'
 import NextLink from '@/components/NextLink'
 
 import { contactEmail } from '@/constant/contact'
+import { teamMembers } from '@/constant/teamMembers'
 
 export default function LetsGetInTouch() {
   return (
@@ -19,7 +20,10 @@ export default function LetsGetInTouch() {
       </NextLink>
       <NextLink
         className='flex items-center gap-1 lg:hidden'
-        href='https://calendar.app.google/KicY9pSkoYKqWzZP8'
+        href={
+          teamMembers.find((m) => m.name === 'Tom Graupner')!
+            .calendarRedirectSegment!
+        }
         isExternalLink
       >
         Book a meeting with us! <SiGooglecalendar />

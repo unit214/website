@@ -6,10 +6,7 @@ import { cn } from '@/lib/utils'
 
 import NextLink from '@/components/NextLink'
 
-import KenoLogo from '~/svg/who-we-are-keno.svg'
-import PhilippLogo from '~/svg/who-we-are-philipp.svg'
-import TimoLogo from '~/svg/who-we-are-timo.svg'
-import TomLogo from '~/svg/who-we-are-tom.svg'
+import { teamMembers } from '@/constant/teamMembers'
 
 function ExternalReferences({
   linkedInLink,
@@ -89,61 +86,17 @@ export default function WhoWeAre() {
       <div className='flex w-[430px] flex-col gap-10 lg:w-fit lg:flex-row lg:items-start lg:gap-20'>
         <h1 className='whitespace-nowrap'>Who We Are</h1>
         <div className='flex flex-col gap-10'>
-          <TeamMemberField
-            Logo={TomLogo}
-            name='Tom Graupner'
-            description={
-              <>
-                Co-Founder, Backend Developer
-                <br />
-                and Cloud-Native Specialist
-              </>
-            }
-            linkedInLink='https://www.linkedin.com/in/tom-graupner/'
-            gitHubLink='https://github.com/tgraupne'
-            calendarLink='https://calendar.app.google/KicY9pSkoYKqWzZP8'
-          />
-          <TeamMemberField
-            Logo={KenoLogo}
-            name='Keno Dreßel'
-            description={
-              <>
-                Co-Founder, Full-Stack Engineer
-                <br />
-                and Machine Learning Specialist
-              </>
-            }
-            linkedInLink='https://www.linkedin.com/in/kenodressel/'
-            gitHubLink='https://github.com/kenodressel'
-            calendarLink='https://calendar.app.google/vL9yUjz599Xcdx9q8'
-          />
-          <TeamMemberField
-            Logo={PhilippLogo}
-            name='Philipp Piwowarsky'
-            description={
-              <>
-                Co-Founder, Full-Stack Engineer
-                <br />
-                and Blockchain Specialist
-              </>
-            }
-            linkedInLink='https://www.linkedin.com/in/philipp-piwowarsky/'
-            gitHubLink='https://github.com/thepiwo'
-            calendarLink='https://calendar.app.google/eJDr4qYncBod3xsi7'
-          />
-          <TeamMemberField
-            Logo={TimoLogo}
-            name='Timo Erdelt'
-            description={
-              <>
-                Full-Stack Engineer, Green IT, Functional
-                <br />
-                Programming, User-Centered Design
-              </>
-            }
-            linkedInLink='https://www.linkedin.com/in/timoerdelt/'
-            gitHubLink='https://github.com/tmrdlt'
-          />
+          {teamMembers.map((teamMember, key) => (
+            <TeamMemberField
+              Logo={teamMember.logo}
+              name={teamMember.name}
+              description={teamMember.description}
+              linkedInLink={teamMember.linkedInLink}
+              gitHubLink={teamMember.gitHubLink}
+              calendarLink={teamMember.calendarRedirectSegment}
+              key={key}
+            />
+          ))}
         </div>
       </div>
     </div>
