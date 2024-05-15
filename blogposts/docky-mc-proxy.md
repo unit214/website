@@ -39,6 +39,8 @@ me a chance to dive deeper into its capabilities.
 
 ## How DockyMcProxy Works
 
+<img src="/blogposts/preview/docky-mc-proxy-preview.png" alt="drawing" width="500"/>
+
 DockyMcProxy is designed to streamline the process of setting up a local HTTPS reverse proxy
 using [NGINX](https://www.nginx.com/). Here's a high-level overview of how it works:
 
