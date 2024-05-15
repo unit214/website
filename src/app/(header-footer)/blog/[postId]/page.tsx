@@ -73,16 +73,16 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
   return (
     <div className='flex flex-col'>
       <div className='markdown-body blog-post'>
-        <div className='mb-5 border-b pb-2'>
+        <div className='mb-5 pb-2'>
           <h1 className='mb-0'>{meta.title}</h1>
           <span className='text-sm font-light'>
             Published on {pubDate} by {meta.author}
           </span>
-          <div className='flex flex-row gap-2 text-sm font-light'>
-            Tags: {tags}
-          </div>
         </div>
         <article className='border-b'>{content}</article>
+        <div className='mt-4 flex flex-row gap-2 text-sm font-light'>
+          Tags: {tags}
+        </div>
       </div>
       <div className='my-10 flex flex-col items-center justify-between gap-10 lg:flex-row'>
         <NextPostLink
