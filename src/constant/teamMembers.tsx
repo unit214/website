@@ -16,7 +16,7 @@ export const teamMembers = [
     linkedInLink: 'https://www.linkedin.com/in/tom-graupner/',
     gitHubLink: 'https://github.com/tgraupne',
     calendarLink: 'https://calendar.app.google/KicY9pSkoYKqWzZP8',
-    calendarRedirectSegment: 'meet-tom',
+    calendarRedirectSegment: ['meet-tom', 'meet-us'],
   },
   {
     name: 'Keno Dreßel',
@@ -31,7 +31,7 @@ export const teamMembers = [
     linkedInLink: 'https://www.linkedin.com/in/kenodressel/',
     gitHubLink: 'https://github.com/kenodressel',
     calendarLink: 'https://calendar.app.google/vL9yUjz599Xcdx9q8',
-    calendarRedirectSegment: 'meet-keno',
+    calendarRedirectSegment: ['meet-keno'],
   },
   {
     name: 'Philipp Piwowarsky',
@@ -46,7 +46,7 @@ export const teamMembers = [
     linkedInLink: 'https://www.linkedin.com/in/philipp-piwowarsky/',
     gitHubLink: 'https://github.com/thepiwo',
     calendarLink: 'https://calendar.app.google/eJDr4qYncBod3xsi7',
-    calendarRedirectSegment: 'meet-philipp',
+    calendarRedirectSegment: ['meet-philipp'],
   },
   {
     name: 'Timo Erdelt',

@@ -10,19 +10,33 @@ type MeetTeamMemberProps = {
     calendarRedirect: string
   }
 }
-export function generateStaticParams() {
-  return teamMembers
-    .map((teamMember) => ({
-      calendarRedirect: teamMember.calendarRedirectSegment,
-    }))
-    .filter((url) => !!url)
+export function generateStaticParams(): { calendarRedirect: string }[] {
+  return teamMembers.reduce(
+    (acc, teamMember) => {
+      if (teamMember.calendarRedirectSegment) {
+        return [
+          ...acc,
+          ...teamMember.calendarRedirectSegment.map((calendarRedirect) => ({
+            calendarRedirect,
+          })),
+        ]
+      }
+      return acc
+    },
+    [] as { calendarRedirect: string }[],
+  )
 }
 
 export default function MeetTeamMember({
   params: { calendarRedirect },
 }: MeetTeamMemberProps) {
   const teamMember = teamMembers.find(
-    (member) => member.calendarRedirectSegment === calendarRedirect,
+    // casting to ReadonlyArray<string> because TypeScript rejects searching in a known content with a generic string
+    // see https://stackoverflow.com/questions/56565528/typescript-const-assertions-how-to-use-array-prototype-includes
+    (member) =>
+      (member.calendarRedirectSegment as ReadonlyArray<string>)?.includes(
+        calendarRedirect,
+      ),
   )
   if (!teamMember || !teamMember.calendarLink) {
     notFound()

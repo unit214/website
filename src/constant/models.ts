@@ -34,5 +34,5 @@ export type TeamMember = {
   linkedInLink: string
   gitHubLink: string
   calendarLink?: string
-  calendarRedirectSegment?: string // local url segment used to redirect to calendar link ({baseUrl}/{calendarRedirectUrl})
+  calendarRedirectSegment?: string[] // local url segment used to redirect to calendar link ({baseUrl}/{calendarRedirectUrl})
 }
