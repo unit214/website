@@ -93,7 +93,7 @@ export default function WhoWeAre() {
               description={teamMember.description}
               linkedInLink={teamMember.linkedInLink}
               gitHubLink={teamMember.gitHubLink}
-              calendarLink={teamMember.calendarRedirectSegment}
+              calendarLink={teamMember.calendarRedirectSegment[0]}
               key={key}
             />
           ))}
