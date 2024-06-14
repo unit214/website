@@ -61,6 +61,6 @@ export const teamMembers = [
     linkedInLink: 'https://www.linkedin.com/in/timoerdelt/',
     gitHubLink: 'https://github.com/tmrdlt',
     calendarLink: undefined,
-    calendarRedirectSegment: undefined,
+    calendarRedirectSegment: [],
   },
 ] as const

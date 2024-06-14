@@ -22,7 +22,7 @@ export default function LetsGetInTouch() {
         className='flex items-center gap-1 lg:hidden'
         href={
           teamMembers.find((m) => m.name === 'Tom Graupner')!
-            .calendarRedirectSegment!
+            .calendarRedirectSegment[0]!
         }
         isExternalLink
       >
