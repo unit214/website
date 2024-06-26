@@ -15,7 +15,7 @@ export default function BlogPostPreview({ post }: { post: Post }) {
         <NextImage
           alt='preview'
           src={post.meta.previewImage || '/blogposts/preview/default.jpg'}
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'contain' }}
           fill
         />
       </div>
