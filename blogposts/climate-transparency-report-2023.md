@@ -16,6 +16,7 @@ previewImage: '/blogposts/preview/climate-transparency-report-2023.png'
 
 At Unit 214 GmbH, we prioritize environmental sustainability, as evident in our efforts to minimize carbon emissions.
 Using euros and CO<sub>2</sub>e kg conversion metrics, this report outlines our CO<sub>2</sub>e emissions for 2023, totaling 17.310 kg, and underscores our commitment to reducing our carbon footprint.
+Compared to [2022](https://unit214.de/blog/climate-transparency-report-2022) we lowered our overall carbon footprint by 2.560 kg.
 In this report, we focus on the major emission items and acknowledge additional categories contributing approximately 3.484 kg CO<sub>2</sub>e.
 The main categories are:
 
@@ -34,8 +35,8 @@ We have also included the CO<sub>2</sub>e footprint of our office itself in this
 CO<sub>2</sub>e Emissions: 🚅 249 kg, 🚙 70 kg, ✈️ -- kg, 🏨 118 kg
 
 Travel to clients, conferences, and team events necessitated a mix of comfort and sustainability.
-In 2023 we did not book a single flight and were able to reduce our travel significantly.
-In total we reduced our travel impact by over 90%.
+In 2023, we did not book a single flight and were able to reduce our travel significantly.
+In total, we reduced our travel impact by over 90%.
 
 ## <span style={{ color: '#F489A0' }}>Benefits & Team Events (2.050 kg CO<sub>2</sub>e)</span>
 
@@ -45,5 +46,5 @@ We are focusing on improvements and have reduced our emissions by 700 kg since 2
 ## <span style={{ color: '#F489A0' }}>Conclusion</span>
 
 Our 2023 report, revealing emissions of 17.310 kg CO<sub>2</sub>e, highlights our dedication to environmental accountability, exemplified by our choice to offset our impact via Atmosfair twofold.
-Compared to 2022 we lowered our overall carbon footprint by 2.560 kg. It highlights areas for improvement and our transparent approach to sustainability.
+It highlights areas for improvement and our transparent approach to sustainability.
 With a team of four employees, we are committed to reducing our carbon footprint and prioritizing environmental care, even as our business grows.
