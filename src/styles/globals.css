@@ -311,4 +311,14 @@ y
   ul {
     list-style: revert;
   }
+
+  /* adjust headline colors to match CI */
+  h1,
+  h3 {
+    color: #189bb1;
+  }
+
+  h4 {
+    color: #ef728e;
+  }
 }
