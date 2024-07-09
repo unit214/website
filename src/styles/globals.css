@@ -322,3 +322,20 @@ y
     color: #ef728e;
   }
 }
+
+/* Markdown styles */
+.blog-post {
+  .screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .center {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
