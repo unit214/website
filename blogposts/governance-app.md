@@ -18,7 +18,7 @@ at [governance.aeternity.com](https://governance.aeternity.com)!
 
 ## 🏛️ Introduction and Background
 
-aeternity, a platform committed to creating a more equitable online ecosystem through scalable, open-source, and
+The aeternity blockchain, a platform committed to creating a more equitable online ecosystem through scalable, open-source, and
 cryptographic protocols, introduced the Governance App to embody its vision for participatory digital governance within
 the Web3 space. This case study explores the app's development, features, challenges, and its broader implications for
 blockchain governance.
