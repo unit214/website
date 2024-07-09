@@ -13,7 +13,8 @@ previewImage: '/blogposts/preview/governance-app.png'
   <img src="/blogposts/governance-app/img_2.png" />
 </p>
 
-**TLDR**: We made a decentralized voting app which you can try it out at [governance.aeternity.com](https://governance.aeternity.com)!
+**TLDR**: We designed and implemented a decentralized voting app which you can try out
+at [governance.aeternity.com](https://governance.aeternity.com)!
 
 ## 🏛️ Introduction and Background
 
@@ -24,7 +25,7 @@ blockchain governance.
 
 The Governance App was envisioned as a tool to empower the aeternity community, enabling them to have a say in the
 platform's direction through a transparent and verifiable polling mechanism. The Unit 214 Team was commissioned to
-implement this vision. The development process was focused on their commitment to open-source principles, with actively
+implement this vision. The development process was focused on their commitment to open-source principles, actively
 seeking and incorporating feedback from testing phases to refine and improve the app. Key challenges such as user
 accessibility and poll result verification were addressed through iterative testing and community feedback.
 
@@ -62,14 +63,15 @@ backend was offline or not trustworthy. Smart contracts play a pivotal role in m
 to interact with the blockchain directly and securely for critical operations like voting and delegations. Additionally,
 the app is also validating the smart contracts code to ensure their integrity.
 
-These challenges were met with a blend of modern technologies and innovative approaches, ensuring the Governance App was
-not only a testament to aeternity's technical possibilities but also a forward-looking solution for decentralised
-governance.
+These challenges were met with fully perishable state in the backend, a focus on client side data processing,
+and exceptional error handling, ensuring the Governance App was not only a testament to aeternity's technical
+possibilities but also a forward-looking solution for decentralised governance with great user experience, regardless of
+the users connectivity and trust in central entities.
 
 ## 📈 Results and Impact
 
 The Governance App has seen a positive reception from the aeternity community, with an increasing number of polls and
-active participation reflecting its utility and impact. The app has been built from scratch in 4 months and has been
+active participation reflecting its utility and impact. The app was built from scratch in 4 months and has been
 running in production on low maintenance and with no significant incidents since 2019.
 
 ## 🎯 Conclusion
