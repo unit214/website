@@ -7,7 +7,13 @@ previewText: 'Explore the development, features, and impact of the aeternity Gov
 previewImage: '/blogposts/preview/governance-app.png'
 ---
 
-**TLDR**: We made a decentralized app which you can try it out at [governance.aeternity.com](https://governance.aeternity.com)!
+<p className="screenshots">
+  <img src="/blogposts/governance-app/img.png" />
+  <img src="/blogposts/governance-app/img_1.png" /> 
+  <img src="/blogposts/governance-app/img_2.png" />
+</p>
+
+**TLDR**: We made a decentralized voting app which you can try it out at [governance.aeternity.com](https://governance.aeternity.com)!
 
 ## 🏛️ Introduction and Background
 
@@ -73,13 +79,3 @@ showcasing our team's ability to navigate complex technical challenges with inno
 successfully implemented a system that supports liquid democracy and ensures global accessibility and resilience. This
 work has not only demonstrated our technical capabilities but has also had an impact on the aeternity community,
 fostering a more democratic and participatory decision-making process.
-
-<p className="screenshots">
-  <img src="/blogposts/governance-app/img.png"  />
-  <img src="/blogposts/governance-app/img_1.png" /> 
-  <img src="/blogposts/governance-app/img_2.png" />
-</p>
-<p className="center">
-    These are some screenshots from the application, showing the user interface of the poll overview, a poll detail view and
-    a user account.
-</p>
