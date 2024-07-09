@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { ReactElement } from 'react'
 import { HiArrowLongLeft, HiArrowLongRight } from 'react-icons/hi2'
+import { SiGooglecalendar } from 'react-icons/si'
 
 import 'highlight.js/styles/github.css'
 import 'github-markdown-css/github-markdown-light.css'
@@ -11,6 +12,7 @@ import { formatDate } from '@/lib/date'
 import NextLink from '@/components/NextLink'
 
 import { Meta, Post } from '@/constant/models'
+import { teamMembers } from '@/constant/teamMembers'
 
 type BlogPostProps = {
   params: {
@@ -70,6 +72,8 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
 
   const tags = meta.tags.map((tag, i) => <code key={i}>{tag}</code>)
 
+  const teamMember = teamMembers.find(({ name }) => name === meta.author)
+
   return (
     <div className='flex flex-col'>
       <div className='markdown-body blog-post'>
@@ -79,7 +83,29 @@ export default async function BlogPost({ params: { postId } }: BlogPostProps) {
             Published on {pubDate} by {meta.author}
           </span>
         </div>
-        <article className='border-b'>{content}</article>
+        <article>{content}</article>
+        <h2>About the Author</h2>
+        <div className='flex w-full border-b pb-4'>
+          {teamMember ? (
+            <div className='flex flex-1 flex-row gap-6'>
+              <div>
+                <teamMember.logo className='h-16 w-full' />
+              </div>
+              <div>
+                <div className='font-semibold'>{teamMember.name}</div>
+                {teamMember.description}
+              </div>
+            </div>
+          ) : null}
+          {teamMember?.calendarLink ? (
+            <div className='flex flex-1 items-center justify-center text-2xl'>
+              <NextLink href={teamMember?.calendarLink} isExternalLink>
+                Book a meeting with {meta.author}{' '}
+                <SiGooglecalendar className='inline' />
+              </NextLink>
+            </div>
+          ) : null}
+        </div>
         <div className='mt-4 flex flex-row gap-2 text-sm font-light'>
           Tags: {tags}
         </div>
