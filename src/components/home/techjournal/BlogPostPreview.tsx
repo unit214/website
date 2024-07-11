@@ -11,7 +11,7 @@ export default function BlogPostPreview({ post }: { post: Post }) {
       className='flex max-w-[350px] flex-col gap-2 no-underline transition-opacity duration-200 ease-in hover:opacity-80'
       href={`/blog/${post.meta.id}`}
     >
-      <div className='relative h-[200px] lg:h-[230px]'>
+      <div className='relative mb-4 h-[200px] lg:h-[230px]'>
         <NextImage
           alt='preview'
           src={post.meta.previewImage || '/blogposts/preview/default.jpg'}
