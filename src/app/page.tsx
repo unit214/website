@@ -19,7 +19,9 @@ export default function HomePage() {
             <OurMission />
             <WhoWeAre />
             <Testimonials />
-            <TechJournal />
+            <div className='flex w-full justify-center px-10 pb-20 pt-20 lg:px-20 lg:pb-0'>
+              <TechJournal />
+            </div>
             <BookAMeeting />
             <LetsGetInTouch />
           </div>
