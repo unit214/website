@@ -19,8 +19,8 @@ Contrary to popular case studies of today's "Netflixes" and "Spotifys," which mo
 
 - Infrastructure resiliency
 - Observability of infrastructure and applications
-- Comprehensive and current documentation
-- Long mean time to recovery
+- Comprehensive and up-to-date documentation
+- Long mean time to discovery and recovery
 - Complex engineering onboarding with a lot of hidden knowledge
 - Suboptimal developer experience
 
@@ -32,11 +32,13 @@ We advocated for migrating to a Kubernetes-based infrastructure as a foundationa
 Key components of our solution include:
 
 - **Infrastructure as Code**: Using tools like Terraform or CDK, we transform infrastructure management into a more manageable, version-controlled process.
+- **Integration of Managed Cloud Services**: Utilizing managed services for Kubernetes, IAM and Compute frees up engineering resources and shifts the responsibility of resiliency to the cloud provider.
 - **State-of-the-Art Observability**: Integrating cutting-edge monitoring and logging tools that work seamlessly with Kubernetes, providing deeper insight into application performance and system health.
 - **CI/CD Pipeline Update**: Modernizing the continuous integration and deployment pipelines to support containerized applications, resulting in more flexible and efficient deployments.
 
 We recognize that all of the above can be implemented in more traditional VM-based infrastructures as well, however, our experience has shown that migrating to Kubernetes helps customers establishing an improved mindset for making important modernizations.
 Furthermore, in our experience, the above solutions reach their full potential when used in conjunction with Kubernetes.
+Apart from that, Kubernetes' additional general as a cloud-agnostic and cloud-native runtime layer are still a benefit for SMBs, just not as important as the other ones in our project experience.
 
 ## 📈 Our Proven Track Record
 
