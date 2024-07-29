@@ -11,6 +11,7 @@ import { formatDate } from '@/lib/date'
 
 import NextLink from '@/components/NextLink'
 
+import { siteConfig } from '@/constant/config'
 import { Meta, Post } from '@/constant/models'
 import { teamMembers } from '@/constant/teamMembers'
 
@@ -44,7 +45,30 @@ export async function generateMetadata({ params: { postId } }: BlogPostProps) {
 
   return {
     title: post.meta.title,
-    description: 'Unit 214',
+    description: post.meta.previewText,
+    openGraph: {
+      title: post.meta.title,
+      description: post.meta.previewText,
+      url: `${siteConfig.url}/blog/${post.meta.id}`,
+      type: 'article',
+      images: [
+        {
+          url: `${siteConfig.url}${post.meta.previewImage}`,
+          alt: post.meta.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.meta.title,
+      description: post.meta.previewText,
+      images: [
+        {
+          url: `${siteConfig.url}${post.meta.previewImage}`,
+          alt: post.meta.title,
+        },
+      ],
+    },
   }
 }
 
