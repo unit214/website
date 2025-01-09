@@ -3,6 +3,7 @@ import { FiMail } from 'react-icons/fi'
 
 import { cn } from '@/lib/utils'
 
+import SQUERBanner from '@/components/home/SQUERBanner'
 import NextLink from '@/components/NextLink'
 
 import { contactEmail } from '@/constant/contact'
@@ -87,7 +88,8 @@ export function HeaderPolygonsCyanAmber({
   className: string
 }) {
   return (
-    <div className={cn('-top-[540px] z-10 lg:-top-[690px]', className)}>
+    <div className={cn('-top-[586px] z-10 lg:-top-[736px]', className)}>
+      <SQUERBanner />
       <div className='flex w-full justify-center'>
         {/* Amber polygon */}
         <div className='header-polygon-amber absolute h-[700px] w-full justify-center lg:h-[824px]' />
