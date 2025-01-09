@@ -4,6 +4,21 @@ import TimoLogo from '~/svg/who-we-are-timo.svg'
 import TomLogo from '~/svg/who-we-are-tom.svg'
 export const teamMembers = [
   {
+    name: 'Keno Dreßel',
+    logo: KenoLogo,
+    description: (
+      <>
+        Co-Founder, Full-Stack Engineer
+        <br />
+        and AI Specialist
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/kenodressel/',
+    gitHubLink: 'https://github.com/kenodressel',
+    calendarLink: 'https://calendar.app.google/vL9yUjz599Xcdx9q8',
+    calendarRedirectSegment: ['meet-keno'],
+  },
+  {
     name: 'Tom Graupner',
     logo: TomLogo,
     description: (
@@ -17,21 +32,6 @@ export const teamMembers = [
     gitHubLink: 'https://github.com/tgraupne',
     calendarLink: 'https://calendar.app.google/KicY9pSkoYKqWzZP8',
     calendarRedirectSegment: ['meet-tom', 'meet-us'],
-  },
-  {
-    name: 'Keno Dreßel',
-    logo: KenoLogo,
-    description: (
-      <>
-        Co-Founder, Full-Stack Engineer
-        <br />
-        and Machine Learning Specialist
-      </>
-    ),
-    linkedInLink: 'https://www.linkedin.com/in/kenodressel/',
-    gitHubLink: 'https://github.com/kenodressel',
-    calendarLink: 'https://calendar.app.google/vL9yUjz599Xcdx9q8',
-    calendarRedirectSegment: ['meet-keno'],
   },
   {
     name: 'Philipp Piwowarsky',

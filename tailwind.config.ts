@@ -13,6 +13,7 @@ export default {
         'primary-cyan': '#10AABF',
         'primary-red': '#F489A0',
         'primary-amber': '#F4EA78',
+        'squer-dark-blue': '#2C3747',
       },
       fontSize: {
         main: ['42px', '55px'],

@@ -49,7 +49,7 @@ export default function HeaderAndMainClaim() {
     <HeaderPolygonsCyanAmber className='sticky'>
       <div className='flex h-full w-full flex-col justify-center'>
         <Header
-          className='absolute top-0'
+          className='absolute top-16'
           clickOnLogoBehaviour='scrollUp'
           clickOnContactBehaviour='scrollDown'
         />
@@ -89,7 +89,7 @@ function MainClaim() {
       <br className='hidden sm:inline-flex' />
       <span className='text-white/50'> AND </span>{' '}
       <br className='inline-flex sm:hidden' />
-      IT CONSULTING
+      AI CONSULTING
     </div>
   )
 }
