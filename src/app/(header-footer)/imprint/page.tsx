@@ -39,11 +39,7 @@ export default function ImprintPage() {
 
         <div className='flex flex-col items-center gap-5'>
           <h2>Kontakt</h2>
-          <p className='text-center'>
-            Telefon: +49 (0)89 31908366
-            <br />
-            E-Mail: {contactEmail}
-          </p>
+          <p className='text-center'>E-Mail: {contactEmail}</p>
         </div>
 
         <div className='flex flex-col items-center gap-5'>
